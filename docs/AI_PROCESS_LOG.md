@@ -184,6 +184,45 @@ Checked: `npm test` (39 passing), `tsc -b`, `vite build`, plus headless-Chrome s
 
 ✍️ **PJ to complete:** did the breakdown answer "why" the way a Resource Manager would ask it? Anything to cut?
 
+## Session 3: week-by-week redesign (Claude Code)
+
+Prompt (summarised, so paste the full text if you want it on record): the weekly breakdown felt like a spreadsheet, with ~30 near-identical rows. Group identical weeks, add horizontal capacity bars (green / amber / red), make PTO and holidays stand out, keep drill-down to exact numbers, add a summary at the top, don't let grouping hide differences, keep keyboard and focus behaviour, and keep the calculations unchanged.
+
+What the AI did:
+- Added `groupWeeks` and `summarizeWeeks` in `src/domain/weekGroups.ts`. Both are pure; no calculation changed, they only regroup the existing `PreviewWeek` data.
+- Replaced the table with period cards. Each card has a capacity bar, a status stripe and label, PTO/holiday chips and an expandable detail (the same arithmetic and project list as before).
+- 6 new tests. One checks that weeks with the same utilisation but different projects do *not* merge.
+
+Where the AI's output was wrong or needed a decision:
+- One of its own tests expected weeks to merge across the start of tentative work when tentative work isn't counted. The code (correctly) keeps them apart, because the project list differs. The *test* was wrong and was rewritten: always split, so the detail never misrepresents a merged period.
+- Each period button's screen-reader name ran all the visible text together ("Dec 18· 3 weeks200%40h…"). It now has an explicit spoken summary.
+- Judgement call to review: a week that is both over 100% and has time off is coloured **red** (over wins) but still carries its amber time-off chip.
+
+Checked: `npm test`, `tsc -b`, `vite build`, headless-Chrome screenshots (Grace: 28 weeks → 7 periods; Hannah: 2; Sofia: 9), and a keyboard run (toggle → period → Enter → Esc).
+
+✍️ **PJ to complete:** does the grouping match how you'd talk a client through someone's availability?
+
+## Session 4: capacity terminology (Claude Code)
+
+Prompt (summarised, so paste the full text if you want it on record):
+- "24h available" was misleading when someone is fully booked. Use five terms: working capacity, committed, proposed, free, utilization.
+- Free should never be negative; show "0h free" and "Xh over capacity" instead.
+- Weeks with no working capacity should read "Away", and be a conflict if work is still assigned.
+- Be careful and explicit about proration in partial weeks.
+- Don't change data or assignments unless there's a real calculation issue.
+
+What the AI found and did:
+- **One real calculation gap, not just labels.** Hours were only counted on working days, so a fully-away week showed 0h committed. The work still planned during Hannah Kim's leave, or the proposed role during Olivia Brooks's Thanksgiving week, was invisible rather than flagged. Added `plannedOnDaysOffHours` (same allocation × daily-hours formula, on time-off/not-employed days; holidays excluded) plus `freeHours` and `overHours` to `PreviewWeek`. No existing number changed.
+- New statuses: **conflict** (away with work planned) and **away** (nothing planned).
+- Relabelled the period cards, the expanded detail (with the per-project proration formula), the summary chips, the chart legend and tooltips, the preview header ("Peak utilization"), the commitments table ("Allocation", "40h in a full week"), the candidate card stat ("Free now", with a tooltip) and two reason strings ("% of capacity free on average").
+- 5 new domain tests: free clamped at 0; over capacity; proration shown as days; planned-on-days-off for Olivia (24h, holidays excluded) and Hannah (50h).
+
+Decisions worth reviewing:
+- Olivia's Thanksgiving week (3 vacation days + 2 holidays) is now a **conflict** in the week-by-week view, but her overall verdict stays **Safe**, with the vacation as a heads-up. I kept the verdict rules unchanged as asked. Say if a fully-away week with the new role in it should require a decision.
+- Holidays are excluded from "planned on days off". That's an assumption that the firm closes and clients expect it.
+
+✍️ **PJ to complete.**
+
 ## My review and validation
 
 ✍️ **PJ to complete.** Suggested prompts for myself, all to be answered honestly:

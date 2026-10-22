@@ -1,7 +1,10 @@
 import {
+  awayOn,
   countsToward,
+  dailyCapacityHours,
   overallocatedSpans,
   overlapsRange,
+  plannedPctOn,
   resolveAssignment,
   toAssignment,
   weeklyLoad,
@@ -11,7 +14,7 @@ import {
   type ResolvedAssignment,
 } from './capacity'
 import { LEVEL_RANK, matchSkills } from './candidates'
-import { addDays, formatShort } from './dates'
+import { addDays, formatShort, weekdaysIn } from './dates'
 import type { Assignment, ISODate, OpenRole, Person, Project } from './types'
 
 /**
@@ -71,14 +74,26 @@ export interface WeekContribution {
   projectName: string
   allocationPct: number
   hours: number
+  /** Working days this assignment is counted on in the week (hours = allocation % × daily hours × days). */
+  days: number
   kind: ContributionKind
   internal: boolean
 }
 
 /**
- * Week-by-week hours for the preview. Every number is derived from supplied data:
- * hours = allocation % × (weekly capacity ÷ 5) on each working day the person is available.
- * Holidays and time off remove a day from both availability and commitments.
+ * Week-by-week hours for the preview. Every number is derived from supplied data.
+ *
+ * Proration rule (one rule, used everywhere): an allocation applies to the days the person actually
+ * works. Hours = allocation % × (weekly capacity ÷ 5) × working days. A 100% allocation in a week
+ * with 2 days off is therefore 24h, not 40h. Days off don't silently disappear, though: the hours
+ * the plan has on them are reported separately as `plannedOnDaysOffHours`, and a week with no working
+ * days but planned work is a coverage conflict.
+ *
+ * Terms shown in the UI:
+ * - working capacity = capacityHours (after holidays and time off)
+ * - committed = existing confirmed work; proposed = this role
+ * - free = max(0, capacity − committed − proposed); over capacity = max(0, committed + proposed − capacity)
+ * - utilization = (committed + proposed) ÷ capacity; null ("Away") when capacity is 0
  */
 export interface PreviewWeek {
   weekStart: ISODate
@@ -100,7 +115,16 @@ export interface PreviewWeek {
   tentativeHours: number
   /** committed + new. */
   totalHours: number
-  /** Load as % of available hours; null when the person isn't available at all that week. */
+  /** Working capacity left after committed + proposed work. Never negative. */
+  freeHours: number
+  /** Assigned hours beyond working capacity. 0 when within capacity. */
+  overHours: number
+  /**
+   * Committed + proposed hours the plan has on days the person can't work (time off, before start,
+   * after contract end). Company holidays are excluded: the whole firm is off, so no work is expected.
+   */
+  plannedOnDaysOffHours: number
+  /** Utilization as % of working capacity; null when the person has no working days (Away). */
   beforePct: number | null
   afterPct: number | null
   afterWithTentativePct: number | null
@@ -273,8 +297,17 @@ function weekBreakdown(
   const existing = load(existingAfter, 'withTentative')
   const added = load([proposed], 'confirmed')
   const byId = new Map([...current, ...existingAfter].map((a) => [a.id, a]))
+  const daily = dailyCapacityHours(person)
+  const plannedAfter = [...existingAfter, proposed]
 
   return before.map((b, i) => {
+    let plannedOnDaysOffHours = 0
+    for (const day of weekdaysIn(b.start, b.end)) {
+      const off = awayOn(ctx, person, day)
+      if (!off || off.reason === 'holiday') continue
+      plannedOnDaysOffHours += (plannedPctOn(plannedAfter, day, 'confirmed') / 100) * daily
+    }
+
     const e = existing[i] ?? b
     const contributions: WeekContribution[] = []
     let committedHours = 0
@@ -285,7 +318,7 @@ function weekBreakdown(
       const tentative = a.status === 'Tentative'
       if (tentative) tentativeHours += c.hours
       else committedHours += c.hours
-      contributions.push(contribution(ctx, a, c.hours, tentative ? 'tentative' : 'existing'))
+      contributions.push(contribution(ctx, a, c.hours, tentative ? 'tentative' : 'existing', daily))
     }
 
     let releasedHours = 0
@@ -296,15 +329,18 @@ function weekBreakdown(
       const a = byId.get(c.assignmentId)
       if (a && freed > 0) {
         releasedHours += freed
-        contributions.push(contribution(ctx, a, freed, 'released'))
+        contributions.push(contribution(ctx, a, freed, 'released', daily))
       }
     }
 
     const newHours = added[i]?.committedHours ?? 0
-    if (newHours > 0) contributions.push(contribution(ctx, proposed, newHours, 'new'))
+    if (newHours > 0) contributions.push(contribution(ctx, proposed, newHours, 'new', daily))
 
     const totalHours = committedHours + newHours
     return {
+      freeHours: Math.max(0, b.capacityHours - totalHours),
+      overHours: Math.max(0, totalHours - b.capacityHours),
+      plannedOnDaysOffHours,
       weekStart: b.weekStart,
       start: b.start,
       end: b.end,
@@ -330,6 +366,7 @@ function contribution(
   a: ResolvedAssignment,
   hours: number,
   kind: ContributionKind,
+  daily: number,
 ): WeekContribution {
   const project = ctx.projects.get(a.projectId)
   return {
@@ -338,6 +375,7 @@ function contribution(
     projectName: project?.name ?? a.projectId,
     allocationPct: a.allocationPct,
     hours,
+    days: a.allocationPct > 0 ? Math.round(hours / ((a.allocationPct / 100) * daily)) : 0,
     kind,
     internal: project?.status === 'Internal',
   }

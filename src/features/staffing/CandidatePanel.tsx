@@ -240,7 +240,7 @@ function CandidateRow({
             </span>
           </span>
           <Stat label="Skills" value={`${c.skills.matched.length}/${c.skills.required.length}`} muted={c.skills.profileEmpty} />
-          <Stat label="Free" value={`${freePct}%`} />
+          <Stat label="Free now" value={`${freePct}%`} title="Average share of working capacity not yet committed during the role, before this assignment" />
           <span className="block">
             <span className="mb-1 block text-[11px] text-slate-500">{c.headline}</span>
             <WeekStrip weeks={c.weeks} />
@@ -248,7 +248,7 @@ function CandidateRow({
         </span>
         <span id={`reasons-${p.id}`} className="mt-2 flex flex-wrap gap-x-3 gap-y-1 text-xs text-slate-700">
           <span className="sr-only">
-            Skills {c.skills.matched.length} of {c.skills.required.length}, {freePct}% free on average.{' '}
+            Skills {c.skills.matched.length} of {c.skills.required.length}, {freePct}% of capacity free on average before this role.{' '}
             {summarizeWeeks(c.weeks)}.{' '}
           </span>
           {shown.map((r) => (
@@ -264,9 +264,9 @@ function CandidateRow({
   )
 }
 
-function Stat({ label, value, muted }: { label: string; value: string; muted?: boolean }) {
+function Stat({ label, value, muted, title }: { label: string; value: string; muted?: boolean; title?: string }) {
   return (
-    <span aria-hidden className="block text-right">
+    <span aria-hidden title={title} className="block text-right">
       <span className="block text-[10px] tracking-wide text-slate-500 uppercase">{label}</span>
       <span className={cn('block text-sm font-semibold tabular-nums', muted ? 'text-slate-400' : 'text-slate-900')}>
         {muted ? '?' : value}

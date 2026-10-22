@@ -30,7 +30,7 @@ Requires Node 20+. Built and tested on Node 25.
    - Assign. The dialog requires an acknowledgement.
 4. **R01** → Omar Haddad is *Safe*, with requested PTO Nov 30–Dec 4 "counted as approved".
 5. **R04** → Sofia Marquez goes over 100% in confirmed work. If Enrollment Redesign is won she hits 200% (amber bars). Flip **Count tentative work** in the header and she drops to "Booked".
-6. **Why is someone (un)available?** In any preview, click a bar in the load chart, or open **Show week-by-week hours**. Try Grace Liu on R02, week of Nov 16: 2 training days leave 24h, Claims Dashboard already takes 24h, and the role adds 24h, so 200%. Daniel on R03 with internal work released shows the Design System Refresh hours struck through.
+6. **Why is someone (un)available?** In any preview, click a bar in the load chart, or open **Show week by week**. Identical weeks are grouped into periods with colour-coded capacity bars; holiday and PTO weeks stand alone with amber chips. Try Grace Liu on R02, week of Nov 16: 2 training days leave 24h, Claims Dashboard already takes 24h, and the role adds 24h, so 200%. Daniel on R03 with internal work released shows the Design System Refresh hours struck through.
 7. **Reset demo** restores the supplied data.
 
 Keyboard only: Tab to the role list, move with ↑/↓, open with Enter, Tab into candidates, ↑/↓ + Enter, then Tab to *Assign*. Esc closes the dialog or the preview, and focus returns to where you were.

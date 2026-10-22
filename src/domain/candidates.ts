@@ -209,11 +209,11 @@ export function evaluateCandidate(
       reasons.push({
         factor: 'capacity',
         tone: 'caution',
-        text: `Covers ${countWeeks(weeks, 'fitIfReleased').fits} of ${counts.total} weeks; ${pct}% free on average`,
+        text: `Covers ${countWeeks(weeks, 'fitIfReleased').fits} of ${counts.total} weeks; ${pct}% of capacity free on average`,
       })
       break
     case 'booked':
-      reasons.push({ factor: 'capacity', tone: 'bad', text: `Booked: ${pct}% free on average, needs ${needPct}%` })
+      reasons.push({ factor: 'capacity', tone: 'bad', text: `Booked: ${pct}% of capacity free on average, needs ${needPct}%` })
       break
     case 'not-employed':
       reasons.push({ factor: 'capacity', tone: 'bad', text: 'Not employed during this role' })

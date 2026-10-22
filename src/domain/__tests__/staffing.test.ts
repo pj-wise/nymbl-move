@@ -206,3 +206,35 @@ describe('week-by-week breakdown', () => {
     expect(p.issues.find((i) => i.code === 'overallocated')?.message).toContain('Only if the project is won')
   })
 })
+
+describe('capacity terms', () => {
+  const week = (roleId: string, personId: string, monday: string) => {
+    const p = previewAssignment(ctx, role(roleId), person(personId), { releaseInternal: false })
+    const w = p.weeks.find((x) => x.weekStart === monday)
+    if (!w) throw new Error(`no week ${monday}`)
+    return w
+  }
+
+  it('never shows free hours when over capacity: Grace, week of Nov 16 = 0h free, 24h over', () => {
+    expect(week('R02', 'P12', '2026-11-16')).toMatchObject({ capacityHours: 24, totalHours: 48, freeHours: 0, overHours: 24 })
+  })
+
+  it('reports free hours when there is room: Hannah after her leave = 20h free', () => {
+    expect(week('R03', 'P09', '2027-02-01')).toMatchObject({ capacityHours: 40, totalHours: 20, freeHours: 20, overHours: 0 })
+  })
+
+  it('prorates allocations to working days: Claims Dashboard at 100% in a 3-day week is 24h over 3 days', () => {
+    const c = week('R02', 'P12', '2026-11-16').contributions.find((x) => x.projectName === 'Claims Dashboard')
+    expect(c).toMatchObject({ allocationPct: 100, days: 3, hours: 24 })
+  })
+
+  it('reports work planned on days off, excluding company holidays (Olivia, Thanksgiving week)', () => {
+    // 3 vacation days × 8h × 100% for the new role; the 2 holidays are not counted.
+    const w = week('R02', 'P21', '2026-11-23')
+    expect(w).toMatchObject({ capacityHours: 0, afterPct: null, plannedOnDaysOffHours: 24 })
+  })
+
+  it('counts existing work planned during a leave (Hannah, week of Nov 16 = 125% × 40h = 50h)', () => {
+    expect(week('R03', 'P09', '2026-11-16').plannedOnDaysOffHours).toBe(50)
+  })
+})

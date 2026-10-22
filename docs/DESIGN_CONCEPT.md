@@ -48,9 +48,15 @@
 - **Per-week coverage strip on every row.** Availability for a 28-week role can't be judged from one Monday. The strip shows has room / short / away / not employed for each week of the role, so "free now, clash in March" is visible at a glance.
 - **Verdict before detail in the preview.** *Safe / Needs a decision / Blocked* comes first, then the evidence: chart, issues, commitments, reasons.
 - **The load chart explains itself.** Bars are stacked: *already committed* (grey) and *this role* (indigo). So when someone goes over, you see that it's the new role on top of a full week, not just a tall bar. The scale grows with the peak, with headroom above it, so 200% reads as double rather than "full". The 100% line is drawn above the bars with a tinted over-capacity zone, any part above it is striped red, and a red tick under the axis marks each over-capacity week. A pill states the count: "Over capacity in 19 of 28 weeks".
-- **Week-by-week hours on demand.** A collapsed "Show week-by-week hours" section under the chart keeps the preview scannable. When opened, it shows a table with one row per week: *Available / Committed / This role / Total / Load*. Holidays and time off are named under the week, and over-capacity rows say "24h over". Selecting a week (or clicking its bar) expands that row. It shows *which projects* make up the load (Confirmed, This role, Tentative only if won, Released by this move) and the arithmetic: "3 working days available × 8h = 24h (2 days Training)". A "Calculated, not supplied" note states the formula and the even-week assumption.
+- **Week by week, as periods rather than a spreadsheet.** A collapsed "Show week by week" section under the chart keeps the preview scannable. When opened, it starts with summary chips ("19 weeks over 100% · 9 weeks fully booked"), then a short list of **periods**. Consecutive weeks merge only when they are identical in every respect: same available hours, same committed, new, tentative and released hours, same projects, no days off. So 28 weeks typically become 2–9 rows (Hannah Kim: 2; Grace Liu: 7).
+  - Five explicit terms, defined in a small legend at the top of the list: **Capacity** (hours they can work that week after holidays and time off), **Committed**, **Proposed**, **Free** (never below 0; any excess shows as "Xh over capacity") and **Utilization**. Each period reads "Capacity 40h · Committed 40h · Proposed +20h · Free 0h" with "150% utilization" and "20h over capacity". We avoid the word "available", which was being read as "free to take more work".
+  - Weeks with no working capacity show **Away**, not a percentage. If the plan still has work on those days, the week is a **conflict** (amber, "Conflict: 24h planned while away").
+  - Each period has a horizontal **capacity bar**: existing work plus this role, a black 100% mark, and tentative work striped. It's coloured **green** (within capacity), **amber** (reduced capacity, away with work planned, or over only if tentative work is won) or **red** (over 100%), with a matching left stripe and a text label, so it's never colour alone.
+  - **Holidays and time off always stand out.** Any week with a day off is its own row and carries an amber chip (palm tree for PTO/leave, calendar for holidays). The one exception is a run of fully-away weeks from the same time-off record, e.g. an 11-week leave, which is one period.
+  - Expanding a period shows the exact arithmetic ("5 working days available × 8h = 40h") and the projects behind it (Confirmed / This role / Tentative, only if won / Released by this move). For a merged period it says why the weeks were grouped and lists them.
+  - Clicking a chart bar opens the period containing that week and moves focus to it. The chart highlights every week of the open period.
 - **Show affected commitments, not just a percentage.** The preview lists every project the person is on during the role. Released internal work is struck through, with the hours that project loses.
-- **Confirmed vs tentative.** The confirmed plan is the default view. Tentative work appears as *amber striped bars* stacked on top of the chart, as "+20h if won" in the weekly table, and a "Worth knowing" note. The header toggle "Count tentative work" re-ranks candidates and the attention bucket under the won-scenario. See PROBLEM_STATEMENT.md.
+- **Confirmed vs tentative.** The confirmed plan is the default view. Tentative work appears as *amber striped bars* stacked on top of the chart, as amber stripes on the week-by-week capacity bars, and a "Worth knowing" note. The header toggle "Count tentative work" re-ranks candidates and the attention bucket under the won-scenario. See PROBLEM_STATEMENT.md.
 - **Synthetic data is visibly synthetic.** Every reason that comes from our enrichment carries a dashed violet `DEMO DATA` tag.
 
 ## 2. Flow: spotting a problem → acting on it
@@ -86,8 +92,8 @@
 | Enter / Space | Role or candidate | Select it. Focus moves to the panel that just changed (role heading, or preview heading). |
 | Space | Switches, checkbox | Toggle tentative scenario / release internal work / acknowledge. |
 | Enter / Space | "Show week-by-week hours" | Expand or collapse the weekly table. Focus stays on the toggle. |
-| Tab, then Enter | Week rows | Each week is a button. Enter expands its project breakdown in place (`aria-expanded`), with focus kept on the week. |
-| Click a bar | Load chart | Mouse shortcut: opens the table, expands that week and moves focus to its row. The chart itself is `aria-hidden`; the table is the accessible version. |
+| Tab, then Enter | Periods | Each period is one button with a spoken summary ("Nov 30 – Dec 18, 3 weeks. 200% of available hours, over by 40h…"). Enter expands its detail in place (`aria-expanded`), with focus kept on the period. |
+| Click a bar | Load chart | Mouse shortcut: opens the list, expands the period containing that week and moves focus to it. The chart itself is `aria-hidden`; the period list is the accessible version. |
 | Esc | Preview | Close the preview and **return focus to the candidate it came from**. |
 | Esc | Commit dialog | Close the dialog. Focus returns to the Assign button; the preview stays open. |
 
@@ -104,7 +110,7 @@
 
 - `Tone` (`Pill`, `ToneText`, `DemoDataTag`): one semantic vocabulary (good / caution / bad / unknown / info / blocked), each mapping to icon + colour + screen-reader prefix. New statuses go here, not into ad-hoc classes.
 - `WeekStrip`: per-week fit for any date range. It could be reused for a Monday-view person timeline.
-- `LoadChart` and `WeekBreakdown`: stacked weekly hours, plus an expandable table with a per-week project drill-down. Both read the same `PreviewWeek` data, so the chart and table can't disagree. It could take multiple people to preview swaps.
+- `LoadChart` and `WeekBreakdown`: stacked weekly hours, plus an expandable list of grouped periods with a project drill-down. Both read the same `PreviewWeek` data (grouping lives in `domain/weekGroups.ts`), so the chart and table can't disagree. It could take multiple people to preview swaps.
 - Domain functions are pure (`src/domain/*`), so a backend could replace `replayCommits` without touching the UI.
 
 ## 6. Out of scope (on purpose)

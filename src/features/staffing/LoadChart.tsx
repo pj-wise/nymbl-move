@@ -19,16 +19,16 @@ function chartScaleMax(weeks: PreviewWeek[], includeTentative: boolean): number 
 interface LoadChartProps {
   weeks: PreviewWeek[]
   showTentative: boolean
-  selectedWeek: string | null
+  selectedWeeks: Set<string>
   /** Mouse shortcut into the week-by-week table; the table itself is the keyboard path. */
   onSelectWeek: (weekStart: string) => void
 }
 
 /**
- * Stacked weekly load as a share of the hours the person is actually available that week.
+ * Stacked weekly utilization: committed + proposed hours as a share of that week's working capacity.
  * Visual only (aria-hidden); the week-by-week table carries the same numbers for everyone.
  */
-export function LoadChart({ weeks, showTentative, selectedWeek, onSelectWeek }: LoadChartProps) {
+export function LoadChart({ weeks, showTentative, selectedWeeks, onSelectWeek }: LoadChartProps) {
   const max = chartScaleMax(weeks, showTentative)
   const y = (pct: number) => (Math.min(pct, max) / max) * HEIGHT
   const months = new Set(
@@ -65,19 +65,19 @@ export function LoadChart({ weeks, showTentative, selectedWeek, onSelectWeek }: 
               const total = committed + added
               const tentative = showTentative ? pct(w.tentativeHours) : 0
               const before = w.beforePct ?? 0
-              const selected = w.weekStart === selectedWeek
+              const selected = selectedWeeks.has(w.weekStart)
               return (
                 <div
                   key={w.weekStart}
                   onClick={() => onSelectWeek(w.weekStart)}
                   title={
                     away
-                      ? `Week of ${formatShort(w.weekStart)}: not available. Click for details.`
-                      : `Week of ${formatShort(w.weekStart)}: ${w.afterPct}% of available hours. Click for details.`
+                      ? `Week of ${formatShort(w.weekStart)}: away${w.plannedOnDaysOffHours > 0 ? `, ${w.plannedOnDaysOffHours}h of work still planned (conflict)` : ''}. Click for details.`
+                      : `Week of ${formatShort(w.weekStart)}: ${w.afterPct}% utilization, ${w.freeHours}h free${w.overHours > 0 ? `, ${w.overHours}h over capacity` : ''}. Click for details.`
                   }
                   className={cn(
                     'relative h-full min-w-[4px] flex-1 cursor-pointer rounded-t-[2px] hover:bg-slate-900/5',
-                    selected && 'bg-slate-900/10 outline-2 outline-offset-1 outline-slate-900',
+                    selected && 'bg-slate-900/10 ring-2 ring-slate-900 ring-inset',
                   )}
                 >
                   {away ? (
@@ -121,7 +121,14 @@ export function LoadChart({ weeks, showTentative, selectedWeek, onSelectWeek }: 
             {weeks.map((w) => (
               <span
                 key={w.weekStart}
-                className={cn('h-1 min-w-[4px] flex-1 rounded-full', (w.afterPct ?? 0) > 100 ? 'bg-rose-600' : 'bg-transparent')}
+                className={cn(
+                  'h-1 min-w-[4px] flex-1 rounded-full',
+                  (w.afterPct ?? 0) > 100
+                    ? 'bg-rose-600'
+                    : w.capacityHours === 0 && w.plannedOnDaysOffHours > 0
+                      ? 'bg-amber-500'
+                      : 'bg-transparent',
+                )}
               />
             ))}
           </div>
@@ -136,12 +143,12 @@ export function LoadChart({ weeks, showTentative, selectedWeek, onSelectWeek }: 
       </div>
 
       <figcaption className="flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-slate-600">
-        <Legend swatch="h-2.5 w-2.5 bg-slate-400" label="Already committed" />
-        <Legend swatch="h-2.5 w-2.5 bg-indigo-600" label="This role" />
-        <Legend swatch={cn('h-2.5 w-2.5 bg-rose-50 ring-1 ring-rose-300', OVER_STRIPES)} label="Over 100% of available hours" />
+        <Legend swatch="h-2.5 w-2.5 bg-slate-400" label="Committed" />
+        <Legend swatch="h-2.5 w-2.5 bg-indigo-600" label="Proposed (this role)" />
+        <Legend swatch={cn('h-2.5 w-2.5 bg-rose-50 ring-1 ring-rose-300', OVER_STRIPES)} label="Over 100% of working capacity" />
         {showTentative && <Legend swatch={cn('h-2.5 w-2.5 border border-amber-600', IF_WON_FILL)} label="Tentative, if won" />}
-        <Legend swatch={cn('h-2.5 w-2.5', AWAY_FILL)} label="Away all week" />
-        <Legend swatch="h-0.5 w-3 bg-slate-900" label="Load today" />
+        <Legend swatch={cn('h-2.5 w-2.5', AWAY_FILL)} label="Away (no working capacity)" />
+        <Legend swatch="h-0.5 w-3 bg-slate-900" label="Utilization today" />
       </figcaption>
     </figure>
   )

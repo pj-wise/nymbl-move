@@ -1,5 +1,5 @@
 import { ArrowRight, MousePointerClick, RotateCcw } from 'lucide-react'
-import { useEffect, useRef, useState, type KeyboardEvent, type ReactNode, type RefObject } from 'react'
+import { useEffect, useMemo, useRef, useState, type KeyboardEvent, type ReactNode, type RefObject } from 'react'
 import { DemoDataTag, Pill, ToneText, TONE_ICON, TONE_SURFACE, type Tone } from '@/components/Tone'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
@@ -8,11 +8,12 @@ import type { ActualsSummary } from '@/domain/actuals'
 import type { CandidateEvaluation } from '@/domain/candidates'
 import { VERDICT_LABEL, type IssueSeverity, type StaffingPreview, type Verdict } from '@/domain/preview'
 import type { OpenRole, Person } from '@/domain/types'
+import { groupWeeks, summarizeWeeks } from '@/domain/weekGroups'
 import { firstName, formatHours, formatRange, formatShort } from '@/lib/format'
 import { cn } from '@/lib/utils'
 import { CommitDialog } from './CommitDialog'
 import { LoadChart } from './LoadChart'
-import { WeekBreakdown, weekButtonId } from './WeekBreakdown'
+import { WeekBreakdown, findWeekButton } from './WeekBreakdown'
 import type { CommitRecord } from './useStaffingState'
 
 const VERDICT_TONE: Record<Verdict, Tone> = { safe: 'good', 'needs-decision': 'caution', blocked: 'blocked' }
@@ -100,7 +101,7 @@ function ActivePreview({
   const focusWeek = useRef<string | null>(null)
   useEffect(() => {
     if (!focusWeek.current) return
-    const button = document.getElementById(weekButtonId(focusWeek.current))
+    const button = findWeekButton(focusWeek.current)
     focusWeek.current = null
     button?.focus({ preventScroll: true })
     // Scroll only the preview column; scrollIntoView would also move the page itself.
@@ -112,6 +113,13 @@ function ActivePreview({
   })
   const overWeeks = preview.weeks.filter((w) => (w.afterPct ?? 0) > 100).length
   const chartShowsTentative = showTentative || preview.peakAfterWithTentativePct > preview.peakAfterPct
+  const groups = useMemo(() => groupWeeks(preview.weeks, chartShowsTentative), [preview.weeks, chartShowsTentative])
+  const summary = useMemo(() => summarizeWeeks(preview.weeks, chartShowsTentative), [preview.weeks, chartShowsTentative])
+  // The chart highlights every week of the expanded period.
+  const selectedWeeks = useMemo(
+    () => new Set(groups.find((g) => g.weeks.some((w) => w.weekStart === selectedWeek))?.weeks.map((w) => w.weekStart)),
+    [groups, selectedWeek],
+  )
   const projectName = (id: string) => preview.commitments.find((c) => c.assignment.projectId === id)?.project?.name ?? id
 
   return (
@@ -176,10 +184,10 @@ function ActivePreview({
         <section aria-labelledby="load-heading" className="space-y-3">
           <div className="flex items-baseline justify-between">
             <h3 id="load-heading" className="text-sm font-semibold text-slate-900">
-              Weekly load during the role
+              Weekly utilization during the role
             </h3>
             <p className="text-sm text-slate-700 tabular-nums">
-              Peak <span className="font-medium">{preview.peakBeforePct}%</span> →{' '}
+              Peak utilization <span className="font-medium">{preview.peakBeforePct}%</span> →{' '}
               <span className={cn('font-semibold', preview.peakAfterPct > 100 ? 'text-rose-700' : 'text-slate-900')}>
                 {preview.peakAfterPct}%
               </span>
@@ -195,7 +203,7 @@ function ActivePreview({
           <LoadChart
             weeks={preview.weeks}
             showTentative={chartShowsTentative}
-            selectedWeek={selectedWeek}
+            selectedWeeks={selectedWeeks}
             onSelectWeek={(weekStart) => {
               setBreakdownOpen(true)
               setSelectedWeek(weekStart)
@@ -211,7 +219,8 @@ function ActivePreview({
             </p>
           )}
           <WeekBreakdown
-            weeks={preview.weeks}
+            groups={groups}
+            summary={summary}
             person={person}
             open={breakdownOpen}
             onOpenChange={(open) => {
@@ -251,7 +260,7 @@ function ActivePreview({
             <thead className="text-left text-[11px] tracking-wide text-slate-500 uppercase">
               <tr>
                 <th scope="col" className="pb-1 font-medium">Project</th>
-                <th scope="col" className="pb-1 text-right font-medium">Load</th>
+                <th scope="col" className="pb-1 text-right font-medium">Allocation</th>
                 <th scope="col" className="pb-1 pl-3 font-medium">Dates</th>
                 <th scope="col" className="pb-1 text-right font-medium">Status</th>
               </tr>
@@ -265,7 +274,7 @@ function ActivePreview({
                   </td>
                   <td className="py-1.5 text-right tabular-nums">
                     {c.assignment.allocationPct}%
-                    <span className="block text-[11px] text-slate-500">{formatHours(c.hoursPerWeek)}/wk</span>
+                    <span className="block text-[11px] text-slate-500">{formatHours(c.hoursPerWeek)} in a full week</span>
                   </td>
                   <td className="py-1.5 pl-3 text-xs text-slate-600">
                     {formatRange(c.assignment.startDate, c.assignment.effectiveEnd)}
