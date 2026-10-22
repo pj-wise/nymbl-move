@@ -1,0 +1,9 @@
+time_off_id,person_id,start_date,end_date,type,status
+T01,P04,2026-11-10,2026-11-12,Vacation,Approved
+T02,P09,2026-11-09,2027-01-29,Leave of absence,Approved
+T03,P21,2026-11-23,2026-11-25,Vacation,Approved
+T04,P12,2026-11-19,2026-11-20,Training,Approved
+T05,P07,2026-12-21,2026-12-31,Vacation,Approved
+T06,P16,2026-11-02,2026-11-03,Vacation,Approved
+T07,P11,2026-12-14,2026-12-18,Vacation,Requested
+T08,P13,2026-11-30,2026-12-04,Vacation,Requested

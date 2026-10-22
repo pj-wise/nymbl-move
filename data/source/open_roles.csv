@@ -1,0 +1,8 @@
+open_role_id,project_id,role_needed,level,skills_required,allocation_pct,start_date,end_date,priority,status
+R01,PRJ-06,Software Engineer,Senior,.NET;Azure;SQL,100,2026-11-16,2027-05-28,Must fill,Open
+R02,PRJ-06,Software Engineer,Senior,React;TypeScript;Accessibility,100,2026-11-16,2027-05-28,Must fill,Open
+R03,PRJ-06,Product Designer,Senior,UX research;Interaction design,50,2026-11-16,2027-05-28,Must fill,Open
+R04,PRJ-06,Delivery Manager,Mid,Agile;Client management,50,2026-11-16,2027-05-28,Must fill,Open
+R05,PRJ-06,QA Engineer,Mid,Test automation,50,2026-12-07,2027-05-28,Nice to fill,Open
+R06,PRJ-07,Software Engineer,Mid,React;TypeScript,100,2026-12-07,2027-04-30,If won,Open
+R07,PRJ-07,Product Designer,Mid,Figma;UX research,50,2026-12-07,2027-04-30,If won,Open

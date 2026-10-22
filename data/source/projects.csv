@@ -1,0 +1,9 @@
+project_id,name,client,status,priority,start_date,end_date,win_probability_pct,notes
+PRJ-01,Dispatch Portal,Brightwater Logistics,Active,High,2026-06-01,2027-01-29,,Client demo every other Thursday
+PRJ-02,Claims Dashboard,Cedar Health Network,Active,High,2026-08-03,2027-03-26,,Largest account; strict accessibility requirements
+PRJ-03,Member Onboarding,Summit Credit Union,Active,Medium,2026-09-14,2026-12-18,,
+PRJ-04,Inventory Sync,Ironline Manufacturing,Wrapping up,Medium,2026-04-06,2026-11-13,,Final handoff Nov 13
+PRJ-05,Agent Mobile App,Lakeshore Realty,Active,Medium,2026-07-13,2027-02-26,,
+PRJ-06,Field Ops Platform,Northstar Energy,Starting soon,High,2026-11-16,2027-05-28,,Signed Oct 28. Team not fully staffed yet
+PRJ-07,Enrollment Redesign,Pinecrest Schools,Proposed,Medium,2026-12-07,2027-04-30,60,Decision expected Nov 20
+PRJ-08,Design System Refresh,Harbor & Pine (internal),Internal,Low,2026-09-01,2026-12-31,,Internal work; people can be pulled off for client work

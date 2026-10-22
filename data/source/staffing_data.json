@@ -1,0 +1,2014 @@
+{
+  "as_of": "2026-11-02",
+  "company": "Harbor & Pine (fictional)",
+  "people": [
+    {
+      "person_id": "P01",
+      "name": "Avery Chen",
+      "role": "Solution Architect",
+      "level": "Lead",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Boston, MA",
+      "timezone": "ET",
+      "start_date": "2021-03-01",
+      "contract_end_date": null,
+      "skills": [
+        "Architecture",
+        "Azure",
+        "Integration",
+        "Client discovery"
+      ]
+    },
+    {
+      "person_id": "P02",
+      "name": "Marcus Webb",
+      "role": "Solution Architect",
+      "level": "Senior",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Chicago, IL",
+      "timezone": "CT",
+      "start_date": "2022-06-13",
+      "contract_end_date": null,
+      "skills": [
+        "Architecture",
+        "AWS",
+        "Data modeling"
+      ]
+    },
+    {
+      "person_id": "P03",
+      "name": "Priya Raman",
+      "role": "Solution Architect",
+      "level": "Senior",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Austin, TX",
+      "timezone": "CT",
+      "start_date": "2023-01-09",
+      "contract_end_date": null,
+      "skills": [
+        "Architecture",
+        "Salesforce",
+        "Integration"
+      ]
+    },
+    {
+      "person_id": "P04",
+      "name": "Jordan Ellis",
+      "role": "Delivery Manager",
+      "level": "Lead",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Boston, MA",
+      "timezone": "ET",
+      "start_date": "2020-09-14",
+      "contract_end_date": null,
+      "skills": [
+        "Agile",
+        "Client management",
+        "Budgeting"
+      ]
+    },
+    {
+      "person_id": "P05",
+      "name": "Sofia Marquez",
+      "role": "Delivery Manager",
+      "level": "Senior",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Denver, CO",
+      "timezone": "MT",
+      "start_date": "2022-02-07",
+      "contract_end_date": null,
+      "skills": [
+        "Agile",
+        "Client management",
+        "Risk management"
+      ]
+    },
+    {
+      "person_id": "P06",
+      "name": "Kevin O'Brien",
+      "role": "Delivery Manager",
+      "level": "Mid",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Boston, MA",
+      "timezone": "ET",
+      "start_date": "2024-05-20",
+      "contract_end_date": null,
+      "skills": [
+        "Agile",
+        "Scheduling"
+      ]
+    },
+    {
+      "person_id": "P07",
+      "name": "Lena Fischer",
+      "role": "Product Designer",
+      "level": "Lead",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Remote",
+      "timezone": "PT",
+      "start_date": "2021-08-02",
+      "contract_end_date": null,
+      "skills": [
+        "UX research",
+        "Figma",
+        "Design systems",
+        "Prototyping"
+      ]
+    },
+    {
+      "person_id": "P08",
+      "name": "Daniel Okafor",
+      "role": "Product Designer",
+      "level": "Senior",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Atlanta, GA",
+      "timezone": "ET",
+      "start_date": "2022-10-03",
+      "contract_end_date": null,
+      "skills": [
+        "Figma",
+        "Interaction design",
+        "Accessibility"
+      ]
+    },
+    {
+      "person_id": "P09",
+      "name": "Hannah Kim",
+      "role": "Product Designer",
+      "level": "Mid",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Seattle, WA",
+      "timezone": "PT",
+      "start_date": "2023-07-17",
+      "contract_end_date": null,
+      "skills": [
+        "Figma",
+        "Visual design",
+        "UX research"
+      ]
+    },
+    {
+      "person_id": "P10",
+      "name": "Tomás Silva",
+      "role": "Product Designer",
+      "level": "Junior",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Boston, MA",
+      "timezone": "ET",
+      "start_date": "2025-06-02",
+      "contract_end_date": null,
+      "skills": [
+        "Figma",
+        "Prototyping"
+      ]
+    },
+    {
+      "person_id": "P11",
+      "name": "Ryan Patel",
+      "role": "Software Engineer",
+      "level": "Lead",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Boston, MA",
+      "timezone": "ET",
+      "start_date": "2020-11-02",
+      "contract_end_date": null,
+      "skills": [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Architecture"
+      ]
+    },
+    {
+      "person_id": "P12",
+      "name": "Grace Liu",
+      "role": "Software Engineer",
+      "level": "Senior",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "New York, NY",
+      "timezone": "ET",
+      "start_date": "2021-12-06",
+      "contract_end_date": null,
+      "skills": [
+        "React",
+        "TypeScript",
+        "Accessibility",
+        "Design systems"
+      ]
+    },
+    {
+      "person_id": "P13",
+      "name": "Omar Haddad",
+      "role": "Software Engineer",
+      "level": "Senior",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Detroit, MI",
+      "timezone": "ET",
+      "start_date": "2022-04-18",
+      "contract_end_date": null,
+      "skills": [
+        ".NET",
+        "C#",
+        "SQL",
+        "Azure"
+      ]
+    },
+    {
+      "person_id": "P14",
+      "name": "Emily Novak",
+      "role": "Software Engineer",
+      "level": "Senior",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Denver, CO",
+      "timezone": "MT",
+      "start_date": "2023-03-27",
+      "contract_end_date": null,
+      "skills": [
+        "Python",
+        "APIs",
+        "AWS",
+        "Node.js"
+      ]
+    },
+    {
+      "person_id": "P15",
+      "name": "Chris Morgan",
+      "role": "Software Engineer",
+      "level": "Mid",
+      "employment_type": "Part-time",
+      "weekly_capacity_hours": 24,
+      "location": "Portland, OR",
+      "timezone": "PT",
+      "start_date": "2024-01-08",
+      "contract_end_date": null,
+      "skills": [
+        "React",
+        "CSS",
+        "TypeScript"
+      ]
+    },
+    {
+      "person_id": "P16",
+      "name": "Aisha Bello",
+      "role": "Software Engineer",
+      "level": "Mid",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Houston, TX",
+      "timezone": "CT",
+      "start_date": "2023-09-11",
+      "contract_end_date": null,
+      "skills": [
+        "Java",
+        "Spring",
+        "SQL"
+      ]
+    },
+    {
+      "person_id": "P17",
+      "name": "Nate Sullivan",
+      "role": "Software Engineer",
+      "level": "Mid",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Boston, MA",
+      "timezone": "ET",
+      "start_date": "2024-02-26",
+      "contract_end_date": null,
+      "skills": [
+        "React",
+        "Node.js",
+        "GraphQL"
+      ]
+    },
+    {
+      "person_id": "P18",
+      "name": "Mei Tanaka",
+      "role": "Software Engineer",
+      "level": "Junior",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "San Francisco, CA",
+      "timezone": "PT",
+      "start_date": "2025-08-18",
+      "contract_end_date": null,
+      "skills": []
+    },
+    {
+      "person_id": "P19",
+      "name": "Luis Ortega",
+      "role": "Software Engineer",
+      "level": "Junior",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Phoenix, AZ",
+      "timezone": "MT",
+      "start_date": "2025-09-02",
+      "contract_end_date": null,
+      "skills": [
+        "JavaScript",
+        "React",
+        "HTML/CSS"
+      ]
+    },
+    {
+      "person_id": "P20",
+      "name": "Sam Rivera",
+      "role": "Software Engineer",
+      "level": "Senior",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Raleigh, NC",
+      "timezone": "ET",
+      "start_date": "2022-01-10",
+      "contract_end_date": null,
+      "skills": [
+        "React",
+        "TypeScript",
+        "React Native",
+        "Mobile"
+      ]
+    },
+    {
+      "person_id": "P21",
+      "name": "Olivia Brooks",
+      "role": "Software Engineer",
+      "level": "Senior",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Boston, MA",
+      "timezone": "ET",
+      "start_date": "2021-05-24",
+      "contract_end_date": null,
+      "skills": [
+        "React",
+        "TypeScript",
+        "Next.js",
+        "Accessibility"
+      ]
+    },
+    {
+      "person_id": "P22",
+      "name": "Ben Carter",
+      "role": "Data Engineer",
+      "level": "Senior",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Minneapolis, MN",
+      "timezone": "CT",
+      "start_date": "2022-08-08",
+      "contract_end_date": null,
+      "skills": [
+        "SQL",
+        "Python",
+        "Power BI",
+        "ETL"
+      ]
+    },
+    {
+      "person_id": "P23",
+      "name": "Fatima Noor",
+      "role": "Data Engineer",
+      "level": "Mid",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Dallas, TX",
+      "timezone": "CT",
+      "start_date": "2024-04-01",
+      "contract_end_date": null,
+      "skills": [
+        "SQL",
+        "Python",
+        "Snowflake"
+      ]
+    },
+    {
+      "person_id": "P24",
+      "name": "Jake Morrison",
+      "role": "QA Engineer",
+      "level": "Senior",
+      "employment_type": "Contractor",
+      "weekly_capacity_hours": 32,
+      "location": "Remote",
+      "timezone": "ET",
+      "start_date": "2026-03-02",
+      "contract_end_date": "2026-12-18",
+      "skills": [
+        "Test automation",
+        "Playwright",
+        "API testing"
+      ]
+    },
+    {
+      "person_id": "P25",
+      "name": "Zoe Adams",
+      "role": "QA Engineer",
+      "level": "Mid",
+      "employment_type": "Full-time",
+      "weekly_capacity_hours": 40,
+      "location": "Boston, MA",
+      "timezone": "ET",
+      "start_date": "2026-11-16",
+      "contract_end_date": null,
+      "skills": [
+        "Test automation",
+        "Cypress",
+        "Accessibility testing"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "project_id": "PRJ-01",
+      "name": "Dispatch Portal",
+      "client": "Brightwater Logistics",
+      "status": "Active",
+      "priority": "High",
+      "start_date": "2026-06-01",
+      "end_date": "2027-01-29",
+      "win_probability_pct": null,
+      "notes": "Client demo every other Thursday"
+    },
+    {
+      "project_id": "PRJ-02",
+      "name": "Claims Dashboard",
+      "client": "Cedar Health Network",
+      "status": "Active",
+      "priority": "High",
+      "start_date": "2026-08-03",
+      "end_date": "2027-03-26",
+      "win_probability_pct": null,
+      "notes": "Largest account; strict accessibility requirements"
+    },
+    {
+      "project_id": "PRJ-03",
+      "name": "Member Onboarding",
+      "client": "Summit Credit Union",
+      "status": "Active",
+      "priority": "Medium",
+      "start_date": "2026-09-14",
+      "end_date": "2026-12-18",
+      "win_probability_pct": null,
+      "notes": null
+    },
+    {
+      "project_id": "PRJ-04",
+      "name": "Inventory Sync",
+      "client": "Ironline Manufacturing",
+      "status": "Wrapping up",
+      "priority": "Medium",
+      "start_date": "2026-04-06",
+      "end_date": "2026-11-13",
+      "win_probability_pct": null,
+      "notes": "Final handoff Nov 13"
+    },
+    {
+      "project_id": "PRJ-05",
+      "name": "Agent Mobile App",
+      "client": "Lakeshore Realty",
+      "status": "Active",
+      "priority": "Medium",
+      "start_date": "2026-07-13",
+      "end_date": "2027-02-26",
+      "win_probability_pct": null,
+      "notes": null
+    },
+    {
+      "project_id": "PRJ-06",
+      "name": "Field Ops Platform",
+      "client": "Northstar Energy",
+      "status": "Starting soon",
+      "priority": "High",
+      "start_date": "2026-11-16",
+      "end_date": "2027-05-28",
+      "win_probability_pct": null,
+      "notes": "Signed Oct 28. Team not fully staffed yet"
+    },
+    {
+      "project_id": "PRJ-07",
+      "name": "Enrollment Redesign",
+      "client": "Pinecrest Schools",
+      "status": "Proposed",
+      "priority": "Medium",
+      "start_date": "2026-12-07",
+      "end_date": "2027-04-30",
+      "win_probability_pct": 60,
+      "notes": "Decision expected Nov 20"
+    },
+    {
+      "project_id": "PRJ-08",
+      "name": "Design System Refresh",
+      "client": "Harbor & Pine (internal)",
+      "status": "Internal",
+      "priority": "Low",
+      "start_date": "2026-09-01",
+      "end_date": "2026-12-31",
+      "win_probability_pct": null,
+      "notes": "Internal work; people can be pulled off for client work"
+    }
+  ],
+  "assignments": [
+    {
+      "assignment_id": "A001",
+      "person_id": "P01",
+      "project_id": "PRJ-01",
+      "role_on_project": "Solution Architect",
+      "allocation_pct": 50,
+      "start_date": "2026-06-01",
+      "end_date": "2027-01-29",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A002",
+      "person_id": "P01",
+      "project_id": "PRJ-06",
+      "role_on_project": "Solution Architect",
+      "allocation_pct": 50,
+      "start_date": "2026-11-16",
+      "end_date": "2027-05-28",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A003",
+      "person_id": "P02",
+      "project_id": "PRJ-02",
+      "role_on_project": "Solution Architect",
+      "allocation_pct": 60,
+      "start_date": "2026-08-03",
+      "end_date": "2027-03-26",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A004",
+      "person_id": "P02",
+      "project_id": "PRJ-03",
+      "role_on_project": "Solution Architect",
+      "allocation_pct": 40,
+      "start_date": "2026-09-14",
+      "end_date": "2026-12-18",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A005",
+      "person_id": "P03",
+      "project_id": "PRJ-05",
+      "role_on_project": "Solution Architect",
+      "allocation_pct": 50,
+      "start_date": "2026-07-13",
+      "end_date": "2027-02-26",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A006",
+      "person_id": "P03",
+      "project_id": "PRJ-04",
+      "role_on_project": "Solution Architect",
+      "allocation_pct": 25,
+      "start_date": "2026-04-06",
+      "end_date": "2026-11-13",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A007",
+      "person_id": "P03",
+      "project_id": "PRJ-07",
+      "role_on_project": "Solution Architect",
+      "allocation_pct": 50,
+      "start_date": "2026-12-07",
+      "end_date": "2027-04-30",
+      "status": "Tentative"
+    },
+    {
+      "assignment_id": "A008",
+      "person_id": "P04",
+      "project_id": "PRJ-01",
+      "role_on_project": "Delivery Manager",
+      "allocation_pct": 50,
+      "start_date": "2026-06-01",
+      "end_date": "2027-01-29",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A009",
+      "person_id": "P04",
+      "project_id": "PRJ-02",
+      "role_on_project": "Delivery Manager",
+      "allocation_pct": 50,
+      "start_date": "2026-08-03",
+      "end_date": "2027-03-26",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A010",
+      "person_id": "P05",
+      "project_id": "PRJ-03",
+      "role_on_project": "Delivery Manager",
+      "allocation_pct": 50,
+      "start_date": "2026-09-14",
+      "end_date": "2026-12-18",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A011",
+      "person_id": "P05",
+      "project_id": "PRJ-05",
+      "role_on_project": "Delivery Manager",
+      "allocation_pct": 50,
+      "start_date": "2026-07-13",
+      "end_date": "2027-02-26",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A012",
+      "person_id": "P05",
+      "project_id": "PRJ-07",
+      "role_on_project": "Delivery Manager",
+      "allocation_pct": 50,
+      "start_date": "2026-12-07",
+      "end_date": "2027-04-30",
+      "status": "Tentative"
+    },
+    {
+      "assignment_id": "A013",
+      "person_id": "P06",
+      "project_id": "PRJ-04",
+      "role_on_project": "Delivery Manager",
+      "allocation_pct": 75,
+      "start_date": "2026-04-06",
+      "end_date": "2026-11-13",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A014",
+      "person_id": "P06",
+      "project_id": "PRJ-08",
+      "role_on_project": "Delivery Manager",
+      "allocation_pct": 25,
+      "start_date": "2026-09-01",
+      "end_date": "2026-12-31",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A015",
+      "person_id": "P07",
+      "project_id": "PRJ-02",
+      "role_on_project": "Product Designer",
+      "allocation_pct": 80,
+      "start_date": "2026-08-03",
+      "end_date": "2027-03-26",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A016",
+      "person_id": "P07",
+      "project_id": "PRJ-01",
+      "role_on_project": "Product Designer",
+      "allocation_pct": 50,
+      "start_date": "2026-10-19",
+      "end_date": "2026-11-27",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A017",
+      "person_id": "P08",
+      "project_id": "PRJ-05",
+      "role_on_project": "Product Designer",
+      "allocation_pct": 50,
+      "start_date": "2026-07-13",
+      "end_date": "2027-02-26",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A018",
+      "person_id": "P08",
+      "project_id": "PRJ-08",
+      "role_on_project": "Product Designer",
+      "allocation_pct": 40,
+      "start_date": "2026-09-01",
+      "end_date": "2026-12-31",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A019",
+      "person_id": "P09",
+      "project_id": "PRJ-03",
+      "role_on_project": "Product Designer",
+      "allocation_pct": 50,
+      "start_date": "2026-09-14",
+      "end_date": "2026-12-18",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A020",
+      "person_id": "P09",
+      "project_id": "PRJ-08",
+      "role_on_project": "Product Designer",
+      "allocation_pct": 25,
+      "start_date": "2026-09-01",
+      "end_date": "2026-12-31",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A021",
+      "person_id": "P10",
+      "project_id": "PRJ-08",
+      "role_on_project": "Product Designer",
+      "allocation_pct": 50,
+      "start_date": "2026-09-01",
+      "end_date": "2026-12-31",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A022",
+      "person_id": "P10",
+      "project_id": "PRJ-01",
+      "role_on_project": "Product Designer",
+      "allocation_pct": 50,
+      "start_date": "2026-06-01",
+      "end_date": "2027-01-29",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A023",
+      "person_id": "P11",
+      "project_id": "PRJ-01",
+      "role_on_project": "Software Engineer",
+      "allocation_pct": 100,
+      "start_date": "2026-06-01",
+      "end_date": "2027-01-29",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A024",
+      "person_id": "P12",
+      "project_id": "PRJ-02",
+      "role_on_project": "Software Engineer",
+      "allocation_pct": 100,
+      "start_date": "2026-08-03",
+      "end_date": "2027-03-26",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A025",
+      "person_id": "P13",
+      "project_id": "PRJ-04",
+      "role_on_project": "Software Engineer",
+      "allocation_pct": 100,
+      "start_date": "2026-04-06",
+      "end_date": "2026-11-13",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A026",
+      "person_id": "P14",
+      "project_id": "PRJ-02",
+      "role_on_project": "Software Engineer",
+      "allocation_pct": 60,
+      "start_date": "2026-08-03",
+      "end_date": "2027-03-26",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A027",
+      "person_id": "P14",
+      "project_id": "PRJ-03",
+      "role_on_project": "Software Engineer",
+      "allocation_pct": 40,
+      "start_date": "2026-09-14",
+      "end_date": "2026-12-18",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A028",
+      "person_id": "P15",
+      "project_id": "PRJ-05",
+      "role_on_project": "Software Engineer",
+      "allocation_pct": 100,
+      "start_date": "2026-07-13",
+      "end_date": "2027-02-26",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A029",
+      "person_id": "P16",
+      "project_id": "PRJ-03",
+      "role_on_project": "Software Engineer",
+      "allocation_pct": 100,
+      "start_date": "2026-09-14",
+      "end_date": "2026-12-18",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A030",
+      "person_id": "P17",
+      "project_id": "PRJ-01",
+      "role_on_project": "Software Engineer",
+      "allocation_pct": 60,
+      "start_date": "2026-06-01",
+      "end_date": "2027-01-29",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A031",
+      "person_id": "P17",
+      "project_id": "PRJ-05",
+      "role_on_project": "Software Engineer",
+      "allocation_pct": 40,
+      "start_date": "2026-07-13",
+      "end_date": "2027-02-26",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A032",
+      "person_id": "P18",
+      "project_id": "PRJ-02",
+      "role_on_project": "Software Engineer",
+      "allocation_pct": 100,
+      "start_date": "2026-08-03",
+      "end_date": "2027-03-26",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A033",
+      "person_id": "P19",
+      "project_id": "PRJ-08",
+      "role_on_project": "Software Engineer",
+      "allocation_pct": 50,
+      "start_date": "2026-09-01",
+      "end_date": "2026-12-31",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A034",
+      "person_id": "P20",
+      "project_id": "PRJ-04",
+      "role_on_project": "Software Engineer",
+      "allocation_pct": 100,
+      "start_date": "2026-04-06",
+      "end_date": "2026-10-30",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A035",
+      "person_id": "P21",
+      "project_id": "PRJ-04",
+      "role_on_project": "Software Engineer",
+      "allocation_pct": 100,
+      "start_date": "2026-04-06",
+      "end_date": "2026-11-06",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A036",
+      "person_id": "P22",
+      "project_id": "PRJ-02",
+      "role_on_project": "Data Engineer",
+      "allocation_pct": 50,
+      "start_date": "2026-08-03",
+      "end_date": "2027-03-26",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A037",
+      "person_id": "P22",
+      "project_id": "PRJ-06",
+      "role_on_project": "Data Engineer",
+      "allocation_pct": 50,
+      "start_date": "2026-11-16",
+      "end_date": "2027-05-28",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A038",
+      "person_id": "P23",
+      "project_id": "PRJ-04",
+      "role_on_project": "Data Engineer",
+      "allocation_pct": 50,
+      "start_date": "2026-04-06",
+      "end_date": null,
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A039",
+      "person_id": "P23",
+      "project_id": "PRJ-02",
+      "role_on_project": "Data Engineer",
+      "allocation_pct": 50,
+      "start_date": "2026-08-03",
+      "end_date": "2027-03-26",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A040",
+      "person_id": "P24",
+      "project_id": "PRJ-01",
+      "role_on_project": "QA Engineer",
+      "allocation_pct": 50,
+      "start_date": "2026-06-01",
+      "end_date": "2026-12-18",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A041",
+      "person_id": "P24",
+      "project_id": "PRJ-02",
+      "role_on_project": "QA Engineer",
+      "allocation_pct": 50,
+      "start_date": "2026-08-03",
+      "end_date": "2026-12-18",
+      "status": "Confirmed"
+    },
+    {
+      "assignment_id": "A042",
+      "person_id": "P05",
+      "project_id": "PRJ-01",
+      "role_on_project": "Delivery Manager",
+      "allocation_pct": 0,
+      "start_date": "2026-06-01",
+      "end_date": "2026-08-28",
+      "status": "Confirmed"
+    }
+  ],
+  "open_roles": [
+    {
+      "open_role_id": "R01",
+      "project_id": "PRJ-06",
+      "role_needed": "Software Engineer",
+      "level": "Senior",
+      "skills_required": [
+        ".NET",
+        "Azure",
+        "SQL"
+      ],
+      "allocation_pct": 100,
+      "start_date": "2026-11-16",
+      "end_date": "2027-05-28",
+      "priority": "Must fill",
+      "status": "Open"
+    },
+    {
+      "open_role_id": "R02",
+      "project_id": "PRJ-06",
+      "role_needed": "Software Engineer",
+      "level": "Senior",
+      "skills_required": [
+        "React",
+        "TypeScript",
+        "Accessibility"
+      ],
+      "allocation_pct": 100,
+      "start_date": "2026-11-16",
+      "end_date": "2027-05-28",
+      "priority": "Must fill",
+      "status": "Open"
+    },
+    {
+      "open_role_id": "R03",
+      "project_id": "PRJ-06",
+      "role_needed": "Product Designer",
+      "level": "Senior",
+      "skills_required": [
+        "UX research",
+        "Interaction design"
+      ],
+      "allocation_pct": 50,
+      "start_date": "2026-11-16",
+      "end_date": "2027-05-28",
+      "priority": "Must fill",
+      "status": "Open"
+    },
+    {
+      "open_role_id": "R04",
+      "project_id": "PRJ-06",
+      "role_needed": "Delivery Manager",
+      "level": "Mid",
+      "skills_required": [
+        "Agile",
+        "Client management"
+      ],
+      "allocation_pct": 50,
+      "start_date": "2026-11-16",
+      "end_date": "2027-05-28",
+      "priority": "Must fill",
+      "status": "Open"
+    },
+    {
+      "open_role_id": "R05",
+      "project_id": "PRJ-06",
+      "role_needed": "QA Engineer",
+      "level": "Mid",
+      "skills_required": [
+        "Test automation"
+      ],
+      "allocation_pct": 50,
+      "start_date": "2026-12-07",
+      "end_date": "2027-05-28",
+      "priority": "Nice to fill",
+      "status": "Open"
+    },
+    {
+      "open_role_id": "R06",
+      "project_id": "PRJ-07",
+      "role_needed": "Software Engineer",
+      "level": "Mid",
+      "skills_required": [
+        "React",
+        "TypeScript"
+      ],
+      "allocation_pct": 100,
+      "start_date": "2026-12-07",
+      "end_date": "2027-04-30",
+      "priority": "If won",
+      "status": "Open"
+    },
+    {
+      "open_role_id": "R07",
+      "project_id": "PRJ-07",
+      "role_needed": "Product Designer",
+      "level": "Mid",
+      "skills_required": [
+        "Figma",
+        "UX research"
+      ],
+      "allocation_pct": 50,
+      "start_date": "2026-12-07",
+      "end_date": "2027-04-30",
+      "priority": "If won",
+      "status": "Open"
+    }
+  ],
+  "time_off": [
+    {
+      "time_off_id": "T01",
+      "person_id": "P04",
+      "start_date": "2026-11-10",
+      "end_date": "2026-11-12",
+      "type": "Vacation",
+      "status": "Approved"
+    },
+    {
+      "time_off_id": "T02",
+      "person_id": "P09",
+      "start_date": "2026-11-09",
+      "end_date": "2027-01-29",
+      "type": "Leave of absence",
+      "status": "Approved"
+    },
+    {
+      "time_off_id": "T03",
+      "person_id": "P21",
+      "start_date": "2026-11-23",
+      "end_date": "2026-11-25",
+      "type": "Vacation",
+      "status": "Approved"
+    },
+    {
+      "time_off_id": "T04",
+      "person_id": "P12",
+      "start_date": "2026-11-19",
+      "end_date": "2026-11-20",
+      "type": "Training",
+      "status": "Approved"
+    },
+    {
+      "time_off_id": "T05",
+      "person_id": "P07",
+      "start_date": "2026-12-21",
+      "end_date": "2026-12-31",
+      "type": "Vacation",
+      "status": "Approved"
+    },
+    {
+      "time_off_id": "T06",
+      "person_id": "P16",
+      "start_date": "2026-11-02",
+      "end_date": "2026-11-03",
+      "type": "Vacation",
+      "status": "Approved"
+    },
+    {
+      "time_off_id": "T07",
+      "person_id": "P11",
+      "start_date": "2026-12-14",
+      "end_date": "2026-12-18",
+      "type": "Vacation",
+      "status": "Requested"
+    },
+    {
+      "time_off_id": "T08",
+      "person_id": "P13",
+      "start_date": "2026-11-30",
+      "end_date": "2026-12-04",
+      "type": "Vacation",
+      "status": "Requested"
+    }
+  ],
+  "holidays": [
+    {
+      "date": "2026-11-26",
+      "name": "Thanksgiving"
+    },
+    {
+      "date": "2026-11-27",
+      "name": "Day after Thanksgiving"
+    },
+    {
+      "date": "2026-12-24",
+      "name": "Christmas Eve"
+    },
+    {
+      "date": "2026-12-25",
+      "name": "Christmas Day"
+    },
+    {
+      "date": "2027-01-01",
+      "name": "New Year's Day"
+    }
+  ],
+  "hours_logged": [
+    {
+      "person_id": "P01",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-05",
+      "hours": 20
+    },
+    {
+      "person_id": "P02",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-05",
+      "hours": 23
+    },
+    {
+      "person_id": "P02",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-05",
+      "hours": 16
+    },
+    {
+      "person_id": "P03",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-05",
+      "hours": 21
+    },
+    {
+      "person_id": "P03",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-05",
+      "hours": 8
+    },
+    {
+      "person_id": "P04",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-05",
+      "hours": 18
+    },
+    {
+      "person_id": "P04",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-05",
+      "hours": 22
+    },
+    {
+      "person_id": "P05",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-05",
+      "hours": 20
+    },
+    {
+      "person_id": "P05",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-05",
+      "hours": 18
+    },
+    {
+      "person_id": "P06",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-05",
+      "hours": 30
+    },
+    {
+      "person_id": "P06",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-05",
+      "hours": 10
+    },
+    {
+      "person_id": "P07",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-05",
+      "hours": 30
+    },
+    {
+      "person_id": "P08",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-05",
+      "hours": 20
+    },
+    {
+      "person_id": "P08",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-05",
+      "hours": 15
+    },
+    {
+      "person_id": "P09",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-05",
+      "hours": 18
+    },
+    {
+      "person_id": "P09",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-05",
+      "hours": 8
+    },
+    {
+      "person_id": "P10",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-05",
+      "hours": 4
+    },
+    {
+      "person_id": "P10",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-05",
+      "hours": 18
+    },
+    {
+      "person_id": "P11",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-05",
+      "hours": 43
+    },
+    {
+      "person_id": "P12",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-05",
+      "hours": 49
+    },
+    {
+      "person_id": "P13",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-05",
+      "hours": 38
+    },
+    {
+      "person_id": "P14",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-05",
+      "hours": 26
+    },
+    {
+      "person_id": "P14",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-05",
+      "hours": 16
+    },
+    {
+      "person_id": "P15",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-05",
+      "hours": 22
+    },
+    {
+      "person_id": "P16",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-05",
+      "hours": 39
+    },
+    {
+      "person_id": "P17",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-05",
+      "hours": 25
+    },
+    {
+      "person_id": "P17",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-05",
+      "hours": 17
+    },
+    {
+      "person_id": "P18",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-05",
+      "hours": 40
+    },
+    {
+      "person_id": "P19",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-05",
+      "hours": 18
+    },
+    {
+      "person_id": "P20",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-05",
+      "hours": 40
+    },
+    {
+      "person_id": "P21",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-05",
+      "hours": 40
+    },
+    {
+      "person_id": "P22",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-05",
+      "hours": 20
+    },
+    {
+      "person_id": "P23",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-05",
+      "hours": 18
+    },
+    {
+      "person_id": "P23",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-05",
+      "hours": 19
+    },
+    {
+      "person_id": "P24",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-05",
+      "hours": 14
+    },
+    {
+      "person_id": "P24",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-05",
+      "hours": 16
+    },
+    {
+      "person_id": "P01",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-12",
+      "hours": 22
+    },
+    {
+      "person_id": "P02",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-12",
+      "hours": 23
+    },
+    {
+      "person_id": "P02",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-12",
+      "hours": 16
+    },
+    {
+      "person_id": "P03",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-12",
+      "hours": 20
+    },
+    {
+      "person_id": "P03",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-12",
+      "hours": 9
+    },
+    {
+      "person_id": "P04",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-12",
+      "hours": 20
+    },
+    {
+      "person_id": "P04",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-12",
+      "hours": 18
+    },
+    {
+      "person_id": "P05",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-12",
+      "hours": 20
+    },
+    {
+      "person_id": "P05",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-12",
+      "hours": 20
+    },
+    {
+      "person_id": "P06",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-12",
+      "hours": 30
+    },
+    {
+      "person_id": "P06",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-12",
+      "hours": 12
+    },
+    {
+      "person_id": "P07",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-12",
+      "hours": 33
+    },
+    {
+      "person_id": "P08",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-12",
+      "hours": 19
+    },
+    {
+      "person_id": "P08",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-12",
+      "hours": 14
+    },
+    {
+      "person_id": "P09",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-12",
+      "hours": 20
+    },
+    {
+      "person_id": "P09",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-12",
+      "hours": 10
+    },
+    {
+      "person_id": "P10",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-12",
+      "hours": 2
+    },
+    {
+      "person_id": "P10",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-12",
+      "hours": 20
+    },
+    {
+      "person_id": "P11",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-12",
+      "hours": 45
+    },
+    {
+      "person_id": "P12",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-12",
+      "hours": 46
+    },
+    {
+      "person_id": "P13",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-12",
+      "hours": 40
+    },
+    {
+      "person_id": "P14",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-12",
+      "hours": 22
+    },
+    {
+      "person_id": "P14",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-12",
+      "hours": 16
+    },
+    {
+      "person_id": "P15",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-12",
+      "hours": 23
+    },
+    {
+      "person_id": "P16",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-12",
+      "hours": 40
+    },
+    {
+      "person_id": "P17",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-12",
+      "hours": 25
+    },
+    {
+      "person_id": "P17",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-12",
+      "hours": 16
+    },
+    {
+      "person_id": "P18",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-12",
+      "hours": 40
+    },
+    {
+      "person_id": "P19",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-12",
+      "hours": 22
+    },
+    {
+      "person_id": "P20",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-12",
+      "hours": 40
+    },
+    {
+      "person_id": "P21",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-12",
+      "hours": 40
+    },
+    {
+      "person_id": "P22",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-12",
+      "hours": 20
+    },
+    {
+      "person_id": "P23",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-12",
+      "hours": 20
+    },
+    {
+      "person_id": "P23",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-12",
+      "hours": 20
+    },
+    {
+      "person_id": "P24",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-12",
+      "hours": 16
+    },
+    {
+      "person_id": "P24",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-12",
+      "hours": 15
+    },
+    {
+      "person_id": "P01",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-19",
+      "hours": 22
+    },
+    {
+      "person_id": "P02",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-19",
+      "hours": 23
+    },
+    {
+      "person_id": "P02",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-19",
+      "hours": 17
+    },
+    {
+      "person_id": "P03",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-19",
+      "hours": 22
+    },
+    {
+      "person_id": "P03",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-19",
+      "hours": 9
+    },
+    {
+      "person_id": "P04",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-19",
+      "hours": 18
+    },
+    {
+      "person_id": "P04",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-19",
+      "hours": 20
+    },
+    {
+      "person_id": "P05",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-19",
+      "hours": 20
+    },
+    {
+      "person_id": "P05",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-19",
+      "hours": 20
+    },
+    {
+      "person_id": "P06",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-19",
+      "hours": 30
+    },
+    {
+      "person_id": "P06",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-19",
+      "hours": 10
+    },
+    {
+      "person_id": "P07",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-19",
+      "hours": 33
+    },
+    {
+      "person_id": "P07",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-19",
+      "hours": 20
+    },
+    {
+      "person_id": "P08",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-19",
+      "hours": 20
+    },
+    {
+      "person_id": "P08",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-19",
+      "hours": 16
+    },
+    {
+      "person_id": "P09",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-19",
+      "hours": 18
+    },
+    {
+      "person_id": "P09",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-19",
+      "hours": 8
+    },
+    {
+      "person_id": "P10",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-19",
+      "hours": 4
+    },
+    {
+      "person_id": "P10",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-19",
+      "hours": 19
+    },
+    {
+      "person_id": "P11",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-19",
+      "hours": 44
+    },
+    {
+      "person_id": "P12",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-19",
+      "hours": 49
+    },
+    {
+      "person_id": "P13",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-19",
+      "hours": 40
+    },
+    {
+      "person_id": "P14",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-19",
+      "hours": 22
+    },
+    {
+      "person_id": "P14",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-19",
+      "hours": 17
+    },
+    {
+      "person_id": "P15",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-19",
+      "hours": 22
+    },
+    {
+      "person_id": "P16",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-19",
+      "hours": 42
+    },
+    {
+      "person_id": "P17",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-19",
+      "hours": 24
+    },
+    {
+      "person_id": "P17",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-19",
+      "hours": 16
+    },
+    {
+      "person_id": "P18",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-19",
+      "hours": 42
+    },
+    {
+      "person_id": "P19",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-19",
+      "hours": 22
+    },
+    {
+      "person_id": "P20",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-19",
+      "hours": 40
+    },
+    {
+      "person_id": "P21",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-19",
+      "hours": 40
+    },
+    {
+      "person_id": "P22",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-19",
+      "hours": 21
+    },
+    {
+      "person_id": "P23",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-19",
+      "hours": 20
+    },
+    {
+      "person_id": "P23",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-19",
+      "hours": 20
+    },
+    {
+      "person_id": "P24",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-19",
+      "hours": 16
+    },
+    {
+      "person_id": "P24",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-19",
+      "hours": 16
+    },
+    {
+      "person_id": "P01",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-26",
+      "hours": 22
+    },
+    {
+      "person_id": "P02",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-26",
+      "hours": 24
+    },
+    {
+      "person_id": "P02",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-26",
+      "hours": 14
+    },
+    {
+      "person_id": "P03",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-26",
+      "hours": 22
+    },
+    {
+      "person_id": "P03",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-26",
+      "hours": 8
+    },
+    {
+      "person_id": "P04",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-26",
+      "hours": 20
+    },
+    {
+      "person_id": "P04",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-26",
+      "hours": 20
+    },
+    {
+      "person_id": "P05",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-26",
+      "hours": 21
+    },
+    {
+      "person_id": "P05",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-26",
+      "hours": 21
+    },
+    {
+      "person_id": "P06",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-26",
+      "hours": 28
+    },
+    {
+      "person_id": "P06",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-26",
+      "hours": 8
+    },
+    {
+      "person_id": "P07",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-26",
+      "hours": 33
+    },
+    {
+      "person_id": "P07",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-26",
+      "hours": 21
+    },
+    {
+      "person_id": "P08",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-26",
+      "hours": 20
+    },
+    {
+      "person_id": "P08",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-26",
+      "hours": 17
+    },
+    {
+      "person_id": "P09",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-26",
+      "hours": 20
+    },
+    {
+      "person_id": "P09",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-26",
+      "hours": 11
+    },
+    {
+      "person_id": "P10",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-26",
+      "hours": 4
+    },
+    {
+      "person_id": "P10",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-26",
+      "hours": 20
+    },
+    {
+      "person_id": "P11",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-26",
+      "hours": 44
+    },
+    {
+      "person_id": "P12",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-26",
+      "hours": 48
+    },
+    {
+      "person_id": "P13",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-26",
+      "hours": 38
+    },
+    {
+      "person_id": "P14",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-26",
+      "hours": 24
+    },
+    {
+      "person_id": "P14",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-26",
+      "hours": 16
+    },
+    {
+      "person_id": "P15",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-26",
+      "hours": 23
+    },
+    {
+      "person_id": "P16",
+      "project_id": "PRJ-03",
+      "week_start": "2026-10-26",
+      "hours": 40
+    },
+    {
+      "person_id": "P17",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-26",
+      "hours": 22
+    },
+    {
+      "person_id": "P17",
+      "project_id": "PRJ-05",
+      "week_start": "2026-10-26",
+      "hours": 16
+    },
+    {
+      "person_id": "P19",
+      "project_id": "PRJ-08",
+      "week_start": "2026-10-26",
+      "hours": 19
+    },
+    {
+      "person_id": "P20",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-26",
+      "hours": 42
+    },
+    {
+      "person_id": "P21",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-26",
+      "hours": 40
+    },
+    {
+      "person_id": "P22",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-26",
+      "hours": 19
+    },
+    {
+      "person_id": "P23",
+      "project_id": "PRJ-04",
+      "week_start": "2026-10-26",
+      "hours": 21
+    },
+    {
+      "person_id": "P23",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-26",
+      "hours": 19
+    },
+    {
+      "person_id": "P24",
+      "project_id": "PRJ-01",
+      "week_start": "2026-10-26",
+      "hours": 16
+    },
+    {
+      "person_id": "P24",
+      "project_id": "PRJ-02",
+      "week_start": "2026-10-26",
+      "hours": 16
+    }
+  ]
+}

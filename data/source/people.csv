@@ -1,0 +1,26 @@
+person_id,name,role,level,employment_type,weekly_capacity_hours,location,timezone,start_date,contract_end_date,skills
+P01,Avery Chen,Solution Architect,Lead,Full-time,40,"Boston, MA",ET,2021-03-01,,Architecture;Azure;Integration;Client discovery
+P02,Marcus Webb,Solution Architect,Senior,Full-time,40,"Chicago, IL",CT,2022-06-13,,Architecture;AWS;Data modeling
+P03,Priya Raman,Solution Architect,Senior,Full-time,40,"Austin, TX",CT,2023-01-09,,Architecture;Salesforce;Integration
+P04,Jordan Ellis,Delivery Manager,Lead,Full-time,40,"Boston, MA",ET,2020-09-14,,Agile;Client management;Budgeting
+P05,Sofia Marquez,Delivery Manager,Senior,Full-time,40,"Denver, CO",MT,2022-02-07,,Agile;Client management;Risk management
+P06,Kevin O'Brien,Delivery Manager,Mid,Full-time,40,"Boston, MA",ET,2024-05-20,,Agile;Scheduling
+P07,Lena Fischer,Product Designer,Lead,Full-time,40,Remote,PT,2021-08-02,,UX research;Figma;Design systems;Prototyping
+P08,Daniel Okafor,Product Designer,Senior,Full-time,40,"Atlanta, GA",ET,2022-10-03,,Figma;Interaction design;Accessibility
+P09,Hannah Kim,Product Designer,Mid,Full-time,40,"Seattle, WA",PT,2023-07-17,,Figma;Visual design;UX research
+P10,Tomás Silva,Product Designer,Junior,Full-time,40,"Boston, MA",ET,2025-06-02,,Figma;Prototyping
+P11,Ryan Patel,Software Engineer,Lead,Full-time,40,"Boston, MA",ET,2020-11-02,,React;TypeScript;Node.js;Architecture
+P12,Grace Liu,Software Engineer,Senior,Full-time,40,"New York, NY",ET,2021-12-06,,React;TypeScript;Accessibility;Design systems
+P13,Omar Haddad,Software Engineer,Senior,Full-time,40,"Detroit, MI",ET,2022-04-18,,.NET;C#;SQL;Azure
+P14,Emily Novak,Software Engineer,Senior,Full-time,40,"Denver, CO",MT,2023-03-27,,Python;APIs;AWS;Node.js
+P15,Chris Morgan,Software Engineer,Mid,Part-time,24,"Portland, OR",PT,2024-01-08,,React;CSS;TypeScript
+P16,Aisha Bello,Software Engineer,Mid,Full-time,40,"Houston, TX",CT,2023-09-11,,Java;Spring;SQL
+P17,Nate Sullivan,Software Engineer,Mid,Full-time,40,"Boston, MA",ET,2024-02-26,,React;Node.js;GraphQL
+P18,Mei Tanaka,Software Engineer,Junior,Full-time,40,"San Francisco, CA",PT,2025-08-18,,
+P19,Luis Ortega,Software Engineer,Junior,Full-time,40,"Phoenix, AZ",MT,2025-09-02,,JavaScript;React;HTML/CSS
+P20,Sam Rivera,Software Engineer,Senior,Full-time,40,"Raleigh, NC",ET,2022-01-10,,React;TypeScript;React Native;Mobile
+P21,Olivia Brooks,Software Engineer,Senior,Full-time,40,"Boston, MA",ET,2021-05-24,,React;TypeScript;Next.js;Accessibility
+P22,Ben Carter,Data Engineer,Senior,Full-time,40,"Minneapolis, MN",CT,2022-08-08,,SQL;Python;Power BI;ETL
+P23,Fatima Noor,Data Engineer,Mid,Full-time,40,"Dallas, TX",CT,2024-04-01,,SQL;Python;Snowflake
+P24,Jake Morrison,QA Engineer,Senior,Contractor,32,Remote,ET,2026-03-02,2026-12-18,Test automation;Playwright;API testing
+P25,Zoe Adams,QA Engineer,Mid,Full-time,40,"Boston, MA",ET,2026-11-16,,Test automation;Cypress;Accessibility testing
