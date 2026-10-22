@@ -1,4 +1,4 @@
-import { CalendarDays, FlaskConical, Lock } from "lucide-react";
+import { CalendarDays, Lock } from "lucide-react";
 import { useEffect } from "react";
 import { WORKSPACE_LABEL, can } from "@/auth/permissions";
 import { useSession } from "@/auth/useSession";
