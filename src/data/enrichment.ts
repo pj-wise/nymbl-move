@@ -81,3 +81,6 @@ export const personIndustryExperience: Record<string, string[]> = {
 }
 
 export const enrichment: Enrichment = { clientProfiles, personIndustryExperience }
+
+/** Used when demo data is switched off: matching runs on supplied data only. Tiers don't change. */
+export const NO_ENRICHMENT: Enrichment = { clientProfiles: [], personIndustryExperience: {} }

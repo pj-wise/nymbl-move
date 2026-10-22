@@ -119,7 +119,7 @@ describe('preview', () => {
 })
 
 describe('attention bucket', () => {
-  const items = attentionItems(ctx, sourceDataset, 'confirmed')
+  const items = attentionItems(ctx, 'confirmed')
 
   it('lists Lena Fischer at 130% as a warning', () => {
     expect(items.find((i) => i.kind === 'overallocated')).toMatchObject({
@@ -136,7 +136,7 @@ describe('attention bucket', () => {
 
   it('only shows tentative overallocation in the tentative scenario', () => {
     expect(items.some((i) => i.kind === 'overallocated-if-won')).toBe(false)
-    const withTentative = attentionItems(ctx, sourceDataset, 'withTentative')
+    const withTentative = attentionItems(ctx, 'withTentative')
     expect(withTentative.some((i) => i.kind === 'overallocated-if-won' && i.personId === 'P05')).toBe(true)
   })
 })

@@ -14,8 +14,10 @@ import {
 } from '@/components/ui/dialog'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
+import type { ResolvedAssignment } from '@/domain/capacity'
 import { VERDICT_LABEL, type StaffingPreview } from '@/domain/preview'
 import { firstName, formatRange } from '@/lib/format'
+import { ReleaseInternalToggle } from './PreviewParts'
 
 interface CommitDialogProps {
   preview: StaffingPreview
@@ -24,13 +26,23 @@ interface CommitDialogProps {
    * and move focus without Radix returning focus to a trigger that no longer exists.
    */
   onConfirm: (note: string) => void
+  /**
+   * Release this person's internal work for this assignment. Starts from the role card's toggle;
+   * changing it here updates the preview (and this dialog's verdict) before confirming.
+   */
+  release?: {
+    internal: ResolvedAssignment[]
+    projectName: (id: string) => string
+    checked: boolean
+    onCheckedChange: (value: boolean) => void
+  }
 }
 
 /**
  * Explicit confirmation step. "Needs a decision" requires acknowledging each listed issue;
  * going over 100% additionally requires a written reason. Blocked moves can't open this dialog.
  */
-export function CommitDialog({ preview, onConfirm }: CommitDialogProps) {
+export function CommitDialog({ preview, onConfirm, release }: CommitDialogProps) {
   const [open, setOpen] = useState(false)
   const [acknowledged, setAcknowledged] = useState(false)
   const [note, setNote] = useState('')
@@ -95,6 +107,18 @@ export function CommitDialog({ preview, onConfirm }: CommitDialogProps) {
         </DialogHeader>
 
         <div className="space-y-3 text-sm">
+          {release && (
+            <ReleaseInternalToggle
+              internal={release.internal}
+              projectName={release.projectName}
+              checked={release.checked}
+              onCheckedChange={(value) => {
+                // The verdict and decisions can change, so ask for acknowledgement again.
+                setAcknowledged(false)
+                release.onCheckedChange(value)
+              }}
+            />
+          )}
           <p className="font-medium">
             Verdict: {VERDICT_LABEL[preview.verdict]}
           </p>

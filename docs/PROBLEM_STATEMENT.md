@@ -1,6 +1,6 @@
 # Problem statement
 
-*To the Nymbl hiring team. This is my recommendation as a designer-engineer, not a policy Harbor & Pine has agreed to.*
+_To the Nymbl hiring team. This is my recommendation as a designer-engineer, not a policy Harbor & Pine has agreed to._
 
 ## The open question: should work on a project that hasn't closed count toward someone's load?
 
@@ -14,14 +14,14 @@ Two people already hold tentative 50% allocations on Enrollment Redesign (PRJ-07
 
 So the prototype keeps **one committed baseline** and adds **a clearly separate "if won" layer**:
 
-- Candidate lists and the attention bucket default to *confirmed work only*. This is the plan a client has signed.
-- Every preview *also* computes the won scenario. If it changes anything, the user sees an amber dashed band on the load chart and a plain sentence: "If tentative work is won, Sofia would reach up to 200% (Nov 16–Feb 26). Not counted in the confirmed plan."
-- A header switch, **Count tentative work**, re-ranks everything under the won scenario. The RM can ask "who is safe *either way*?" in one click.
-- Staffing an *If won* role creates a **tentative** assignment, never a confirmed one.
+- Candidate lists and the attention bucket default to _confirmed work only_. This is the plan a client has signed.
+- Every preview _also_ computes the won scenario. If it changes anything, the user sees an amber dashed band on the load chart and a plain sentence: "if proposed project is won, Sofia would reach up to 200% (Nov 16–Feb 26). Not counted in the confirmed plan."
+- A header switch, **Count tentative work**, re-ranks everything under the won scenario. The RM can ask "who is safe _either way_?" in one click.
+- Staffing an _If won_ role creates a **tentative** assignment, never a confirmed one.
 
 This keeps the RM's decision honest. They can choose a person who is safe in both worlds, or knowingly accept a risk that resolves on a known date. That date belongs in the UI ("decision Nov 20"); a probability multiplier doesn't.
 
-**What I'd validate with the client:** whether a tentative allocation should *reserve* the person for staffing purposes after a threshold (e.g. verbal yes, or more than 80%). If so, that's a third status ("soft hold"), not a different weight.
+**What I'd validate with the client:** whether a tentative allocation should _reserve_ the person for staffing purposes after a threshold (e.g. verbal yes, or more than 80%). If so, that's a third status ("soft hold"), not a different weight.
 
 ## Biggest risk: a confident-looking but wrong recommendation
 
@@ -39,6 +39,6 @@ The danger in a staffing flow isn't a missing feature. It's a clean green "Ready
 3. **The whole role window is checked week by week**, not just today. A short holiday is a caveat; long leave, contract ends and start dates change availability.
 4. **Assumptions are labelled where they're used.** "End date assumed" sits on the commitment itself, and requested PTO says "requested, counted as approved".
 5. **Synthetic data is tagged** `DEMO DATA` every time it influences a reason.
-6. **The human stays the decider.** Anything other than *Safe* needs an explicit acknowledgement. Going over 100% needs a written reason, which is kept with the assignment.
+6. **The human stays the decider.** Anything other than _Safe_ needs an explicit acknowledgement. Going over 100% needs a written reason, which is kept with the assignment.
 
 **What I'd do next to reduce it further:** watch two RMs use this on a real Monday and note where they overrule "Ready". Add a lightweight "skills confirmed by lead" flag so unknowns can be cleared. Show the plan-vs-actuals gap more prominently, because Grace Liu logging 48h/week against a 40h plan is exactly the kind of fact a good RM would weigh.

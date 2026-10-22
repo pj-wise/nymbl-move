@@ -1,6 +1,6 @@
 {
   "as_of": "2026-11-02",
-  "company": "Harbor & Pine (fictional)",
+  "company": "Harbor & Pine",
   "people": [
     {
       "person_id": "P01",
@@ -13,12 +13,7 @@
       "timezone": "ET",
       "start_date": "2021-03-01",
       "contract_end_date": null,
-      "skills": [
-        "Architecture",
-        "Azure",
-        "Integration",
-        "Client discovery"
-      ]
+      "skills": ["Architecture", "Azure", "Integration", "Client discovery"]
     },
     {
       "person_id": "P02",
@@ -31,11 +26,7 @@
       "timezone": "CT",
       "start_date": "2022-06-13",
       "contract_end_date": null,
-      "skills": [
-        "Architecture",
-        "AWS",
-        "Data modeling"
-      ]
+      "skills": ["Architecture", "AWS", "Data modeling"]
     },
     {
       "person_id": "P03",
@@ -48,11 +39,7 @@
       "timezone": "CT",
       "start_date": "2023-01-09",
       "contract_end_date": null,
-      "skills": [
-        "Architecture",
-        "Salesforce",
-        "Integration"
-      ]
+      "skills": ["Architecture", "Salesforce", "Integration"]
     },
     {
       "person_id": "P04",
@@ -65,11 +52,7 @@
       "timezone": "ET",
       "start_date": "2020-09-14",
       "contract_end_date": null,
-      "skills": [
-        "Agile",
-        "Client management",
-        "Budgeting"
-      ]
+      "skills": ["Agile", "Client management", "Budgeting"]
     },
     {
       "person_id": "P05",
@@ -82,11 +65,7 @@
       "timezone": "MT",
       "start_date": "2022-02-07",
       "contract_end_date": null,
-      "skills": [
-        "Agile",
-        "Client management",
-        "Risk management"
-      ]
+      "skills": ["Agile", "Client management", "Risk management"]
     },
     {
       "person_id": "P06",
@@ -99,10 +78,7 @@
       "timezone": "ET",
       "start_date": "2024-05-20",
       "contract_end_date": null,
-      "skills": [
-        "Agile",
-        "Scheduling"
-      ]
+      "skills": ["Agile", "Scheduling"]
     },
     {
       "person_id": "P07",
@@ -115,12 +91,7 @@
       "timezone": "PT",
       "start_date": "2021-08-02",
       "contract_end_date": null,
-      "skills": [
-        "UX research",
-        "Figma",
-        "Design systems",
-        "Prototyping"
-      ]
+      "skills": ["UX research", "Figma", "Design systems", "Prototyping"]
     },
     {
       "person_id": "P08",
@@ -133,11 +104,7 @@
       "timezone": "ET",
       "start_date": "2022-10-03",
       "contract_end_date": null,
-      "skills": [
-        "Figma",
-        "Interaction design",
-        "Accessibility"
-      ]
+      "skills": ["Figma", "Interaction design", "Accessibility"]
     },
     {
       "person_id": "P09",
@@ -150,11 +117,7 @@
       "timezone": "PT",
       "start_date": "2023-07-17",
       "contract_end_date": null,
-      "skills": [
-        "Figma",
-        "Visual design",
-        "UX research"
-      ]
+      "skills": ["Figma", "Visual design", "UX research"]
     },
     {
       "person_id": "P10",
@@ -167,10 +130,7 @@
       "timezone": "ET",
       "start_date": "2025-06-02",
       "contract_end_date": null,
-      "skills": [
-        "Figma",
-        "Prototyping"
-      ]
+      "skills": ["Figma", "Prototyping"]
     },
     {
       "person_id": "P11",
@@ -183,12 +143,7 @@
       "timezone": "ET",
       "start_date": "2020-11-02",
       "contract_end_date": null,
-      "skills": [
-        "React",
-        "TypeScript",
-        "Node.js",
-        "Architecture"
-      ]
+      "skills": ["React", "TypeScript", "Node.js", "Architecture"]
     },
     {
       "person_id": "P12",
@@ -201,12 +156,7 @@
       "timezone": "ET",
       "start_date": "2021-12-06",
       "contract_end_date": null,
-      "skills": [
-        "React",
-        "TypeScript",
-        "Accessibility",
-        "Design systems"
-      ]
+      "skills": ["React", "TypeScript", "Accessibility", "Design systems"]
     },
     {
       "person_id": "P13",
@@ -219,12 +169,7 @@
       "timezone": "ET",
       "start_date": "2022-04-18",
       "contract_end_date": null,
-      "skills": [
-        ".NET",
-        "C#",
-        "SQL",
-        "Azure"
-      ]
+      "skills": [".NET", "C#", "SQL", "Azure"]
     },
     {
       "person_id": "P14",
@@ -237,12 +182,7 @@
       "timezone": "MT",
       "start_date": "2023-03-27",
       "contract_end_date": null,
-      "skills": [
-        "Python",
-        "APIs",
-        "AWS",
-        "Node.js"
-      ]
+      "skills": ["Python", "APIs", "AWS", "Node.js"]
     },
     {
       "person_id": "P15",
@@ -255,11 +195,7 @@
       "timezone": "PT",
       "start_date": "2024-01-08",
       "contract_end_date": null,
-      "skills": [
-        "React",
-        "CSS",
-        "TypeScript"
-      ]
+      "skills": ["React", "CSS", "TypeScript"]
     },
     {
       "person_id": "P16",
@@ -272,11 +208,7 @@
       "timezone": "CT",
       "start_date": "2023-09-11",
       "contract_end_date": null,
-      "skills": [
-        "Java",
-        "Spring",
-        "SQL"
-      ]
+      "skills": ["Java", "Spring", "SQL"]
     },
     {
       "person_id": "P17",
@@ -289,11 +221,7 @@
       "timezone": "ET",
       "start_date": "2024-02-26",
       "contract_end_date": null,
-      "skills": [
-        "React",
-        "Node.js",
-        "GraphQL"
-      ]
+      "skills": ["React", "Node.js", "GraphQL"]
     },
     {
       "person_id": "P18",
@@ -319,11 +247,7 @@
       "timezone": "MT",
       "start_date": "2025-09-02",
       "contract_end_date": null,
-      "skills": [
-        "JavaScript",
-        "React",
-        "HTML/CSS"
-      ]
+      "skills": ["JavaScript", "React", "HTML/CSS"]
     },
     {
       "person_id": "P20",
@@ -336,12 +260,7 @@
       "timezone": "ET",
       "start_date": "2022-01-10",
       "contract_end_date": null,
-      "skills": [
-        "React",
-        "TypeScript",
-        "React Native",
-        "Mobile"
-      ]
+      "skills": ["React", "TypeScript", "React Native", "Mobile"]
     },
     {
       "person_id": "P21",
@@ -354,12 +273,7 @@
       "timezone": "ET",
       "start_date": "2021-05-24",
       "contract_end_date": null,
-      "skills": [
-        "React",
-        "TypeScript",
-        "Next.js",
-        "Accessibility"
-      ]
+      "skills": ["React", "TypeScript", "Next.js", "Accessibility"]
     },
     {
       "person_id": "P22",
@@ -372,12 +286,7 @@
       "timezone": "CT",
       "start_date": "2022-08-08",
       "contract_end_date": null,
-      "skills": [
-        "SQL",
-        "Python",
-        "Power BI",
-        "ETL"
-      ]
+      "skills": ["SQL", "Python", "Power BI", "ETL"]
     },
     {
       "person_id": "P23",
@@ -390,11 +299,7 @@
       "timezone": "CT",
       "start_date": "2024-04-01",
       "contract_end_date": null,
-      "skills": [
-        "SQL",
-        "Python",
-        "Snowflake"
-      ]
+      "skills": ["SQL", "Python", "Snowflake"]
     },
     {
       "person_id": "P24",
@@ -407,11 +312,7 @@
       "timezone": "ET",
       "start_date": "2026-03-02",
       "contract_end_date": "2026-12-18",
-      "skills": [
-        "Test automation",
-        "Playwright",
-        "API testing"
-      ]
+      "skills": ["Test automation", "Playwright", "API testing"]
     },
     {
       "person_id": "P25",
@@ -424,11 +325,7 @@
       "timezone": "ET",
       "start_date": "2026-11-16",
       "contract_end_date": null,
-      "skills": [
-        "Test automation",
-        "Cypress",
-        "Accessibility testing"
-      ]
+      "skills": ["Test automation", "Cypress", "Accessibility testing"]
     }
   ],
   "projects": [
@@ -949,11 +846,7 @@
       "project_id": "PRJ-06",
       "role_needed": "Software Engineer",
       "level": "Senior",
-      "skills_required": [
-        ".NET",
-        "Azure",
-        "SQL"
-      ],
+      "skills_required": [".NET", "Azure", "SQL"],
       "allocation_pct": 100,
       "start_date": "2026-11-16",
       "end_date": "2027-05-28",
@@ -965,11 +858,7 @@
       "project_id": "PRJ-06",
       "role_needed": "Software Engineer",
       "level": "Senior",
-      "skills_required": [
-        "React",
-        "TypeScript",
-        "Accessibility"
-      ],
+      "skills_required": ["React", "TypeScript", "Accessibility"],
       "allocation_pct": 100,
       "start_date": "2026-11-16",
       "end_date": "2027-05-28",
@@ -981,10 +870,7 @@
       "project_id": "PRJ-06",
       "role_needed": "Product Designer",
       "level": "Senior",
-      "skills_required": [
-        "UX research",
-        "Interaction design"
-      ],
+      "skills_required": ["UX research", "Interaction design"],
       "allocation_pct": 50,
       "start_date": "2026-11-16",
       "end_date": "2027-05-28",
@@ -996,10 +882,7 @@
       "project_id": "PRJ-06",
       "role_needed": "Delivery Manager",
       "level": "Mid",
-      "skills_required": [
-        "Agile",
-        "Client management"
-      ],
+      "skills_required": ["Agile", "Client management"],
       "allocation_pct": 50,
       "start_date": "2026-11-16",
       "end_date": "2027-05-28",
@@ -1011,9 +894,7 @@
       "project_id": "PRJ-06",
       "role_needed": "QA Engineer",
       "level": "Mid",
-      "skills_required": [
-        "Test automation"
-      ],
+      "skills_required": ["Test automation"],
       "allocation_pct": 50,
       "start_date": "2026-12-07",
       "end_date": "2027-05-28",
@@ -1025,10 +906,7 @@
       "project_id": "PRJ-07",
       "role_needed": "Software Engineer",
       "level": "Mid",
-      "skills_required": [
-        "React",
-        "TypeScript"
-      ],
+      "skills_required": ["React", "TypeScript"],
       "allocation_pct": 100,
       "start_date": "2026-12-07",
       "end_date": "2027-04-30",
@@ -1040,10 +918,7 @@
       "project_id": "PRJ-07",
       "role_needed": "Product Designer",
       "level": "Mid",
-      "skills_required": [
-        "Figma",
-        "UX research"
-      ],
+      "skills_required": ["Figma", "UX research"],
       "allocation_pct": 50,
       "start_date": "2026-12-07",
       "end_date": "2027-04-30",

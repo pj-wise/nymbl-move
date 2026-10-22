@@ -2,7 +2,8 @@ import type { PreviewWeek } from '@/domain/preview'
 import { formatShort } from '@/lib/format'
 import { cn } from '@/lib/utils'
 
-const HEIGHT = 112
+/** Chart height in px. The compact preview uses a shorter chart; the drawer gives it room. */
+const HEIGHT = { compact: 96, full: 200 } as const
 const OVER_STRIPES = 'bg-[repeating-linear-gradient(135deg,rgb(225_29_72/0.75)_0_3px,transparent_3px_6px)]'
 const IF_WON_FILL = 'bg-amber-200 bg-[repeating-linear-gradient(135deg,rgb(217_119_6/0.45)_0_2px,transparent_2px_5px)]'
 const AWAY_FILL = 'bg-[repeating-linear-gradient(135deg,var(--color-slate-300)_0_3px,transparent_3px_6px)]'
@@ -22,15 +23,18 @@ interface LoadChartProps {
   selectedWeeks: Set<string>
   /** Mouse shortcut into the week-by-week table; the table itself is the keyboard path. */
   onSelectWeek: (weekStart: string) => void
+  /** `compact` = shorter, with the essential legend only. Same data and scale either way. */
+  size?: 'compact' | 'full'
 }
 
 /**
  * Stacked weekly utilization: committed + proposed hours as a share of that week's working capacity.
  * Visual only (aria-hidden); the week-by-week table carries the same numbers for everyone.
  */
-export function LoadChart({ weeks, showTentative, selectedWeeks, onSelectWeek }: LoadChartProps) {
+export function LoadChart({ weeks, showTentative, selectedWeeks, onSelectWeek, size = 'full' }: LoadChartProps) {
+  const height = HEIGHT[size]
   const max = chartScaleMax(weeks, showTentative)
-  const y = (pct: number) => (Math.min(pct, max) / max) * HEIGHT
+  const y = (pct: number) => (Math.min(pct, max) / max) * height
   const months = new Set(
     weeks
       .filter((w, i) => i === 0 || w.weekStart.slice(5, 7) !== weeks[i - 1]?.weekStart.slice(5, 7))
@@ -41,7 +45,7 @@ export function LoadChart({ weeks, showTentative, selectedWeeks, onSelectWeek }:
     <figure className="space-y-2">
       <div aria-hidden className="flex gap-1.5">
         {/* Y axis */}
-        <div className="relative w-9 shrink-0 text-right text-[10px] text-slate-500 tabular-nums" style={{ height: HEIGHT }}>
+        <div className="relative w-9 shrink-0 text-right text-[10px] text-slate-500 tabular-nums" style={{ height }}>
           <span className="absolute right-0 -translate-y-1/2" style={{ top: 0 }}>
             {max}%
           </span>
@@ -51,7 +55,7 @@ export function LoadChart({ weeks, showTentative, selectedWeeks, onSelectWeek }:
           <span className="absolute right-0 bottom-0 translate-y-1/2">0</span>
         </div>
 
-        <div className="relative flex-1 border-b border-slate-300" style={{ height: HEIGHT }}>
+        <div className="relative flex-1 border-b border-slate-300" style={{ height }}>
           {/* Over-capacity zone */}
           <div className="absolute inset-x-0 top-0 bg-rose-50" style={{ bottom: y(100) }} />
 
@@ -147,8 +151,12 @@ export function LoadChart({ weeks, showTentative, selectedWeeks, onSelectWeek }:
         <Legend swatch="h-2.5 w-2.5 bg-indigo-600" label="Proposed (this role)" />
         <Legend swatch={cn('h-2.5 w-2.5 bg-rose-50 ring-1 ring-rose-300', OVER_STRIPES)} label="Over 100% of working capacity" />
         {showTentative && <Legend swatch={cn('h-2.5 w-2.5 border border-amber-600', IF_WON_FILL)} label="Tentative, if won" />}
-        <Legend swatch={cn('h-2.5 w-2.5', AWAY_FILL)} label="Away (no working capacity)" />
-        <Legend swatch="h-0.5 w-3 bg-slate-900" label="Utilization today" />
+        {size === 'full' && (
+          <>
+            <Legend swatch={cn('h-2.5 w-2.5', AWAY_FILL)} label="Away (no working capacity)" />
+            <Legend swatch="h-0.5 w-3 bg-slate-900" label="Utilization today" />
+          </>
+        )}
       </figcaption>
     </figure>
   )

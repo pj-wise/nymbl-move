@@ -1,5 +1,5 @@
-import { StaffingFlow } from '@/features/staffing/StaffingFlow'
+import { AppShell } from '@/app/AppShell'
 
 export default function App() {
-  return <StaffingFlow />
+  return <AppShell />
 }

@@ -9,7 +9,8 @@ export function useDeferredFocus() {
   useEffect(() => {
     const el = pending.current?.current
     if (el) {
-      el.focus()
+      // preventScroll: focusing a heading must not move the window. Columns scroll internally.
+      el.focus({ preventScroll: true })
       pending.current = null
     }
   })

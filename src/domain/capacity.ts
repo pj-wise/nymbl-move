@@ -1,5 +1,5 @@
 import { addDays, inRange, maxDate, minDate, weekStartOf, weeksIn, weekdaysIn } from './dates'
-import type { Assignment, Dataset, Holiday, ISODate, Person, Project, Scenario, TimeOff } from './types'
+import type { Assignment, Dataset, Holiday, ISODate, OpenRole, Person, Project, Scenario, TimeOff } from './types'
 
 /**
  * Capacity conventions (see docs/DECISIONS.md):
@@ -249,4 +249,34 @@ export function overlapsRange(a: ResolvedAssignment, start: ISODate, end: ISODat
 /** Strip derived fields so a resolved assignment can be stored back as a plain record. */
 export function toAssignment({ effectiveEnd: _end, endAssumed: _assumed, ...rest }: ResolvedAssignment): Assignment {
   return rest
+}
+
+/**
+ * Internal work that a role could take hours from: confirmed, non-zero, on an Internal project and
+ * overlapping the role. One rule, shared by the preview's release option and candidate matching.
+ */
+export function isReleasableFor(ctx: PlanContext, a: ResolvedAssignment, role: OpenRole): boolean {
+  return (
+    a.allocationPct > 0 &&
+    a.status === 'Confirmed' &&
+    ctx.projects.get(a.projectId)?.status === 'Internal' &&
+    overlapsRange(a, role.startDate, role.endDate)
+  )
+}
+
+/** What's left of a released internal assignment: it ends the day before the role starts (null if it starts inside the role). */
+export function releasedVersion(a: ResolvedAssignment, role: OpenRole): Assignment | null {
+  return a.startDate < role.startDate ? { ...toAssignment(a), endDate: addDays(role.startDate, -1), origin: 'local' } : null
+}
+
+/** The plan as if every person's releasable internal work were released for this role. */
+export function releaseInternalForRole(ctx: PlanContext, role: OpenRole): PlanContext {
+  const assignments = ctx.assignments.flatMap((a) => {
+    if (!isReleasableFor(ctx, a, role)) return [a]
+    const kept = releasedVersion(a, role)
+    return kept ? [resolveAssignment(kept, ctx.projects.get(kept.projectId))] : []
+  })
+  const assignmentsByPerson = new Map<string, ResolvedAssignment[]>()
+  for (const a of assignments) assignmentsByPerson.set(a.personId, [...(assignmentsByPerson.get(a.personId) ?? []), a])
+  return { ...ctx, assignments, assignmentsByPerson }
 }
